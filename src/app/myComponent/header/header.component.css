@@ -1,0 +1,56 @@
+.headerP {
+  grid-area: head;
+  background-color: #343a40;
+  position: fixed;
+  z-index: -10;
+}
+.logo {
+  background: #343a40;
+  width: 80%;
+}
+
+.menu {
+  width: 29vw;
+  height: 80vh;
+  background: #343a40;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.home,
+.musica,
+.eventos {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #adb5bd;
+  justify-content: center;
+  padding: 25px;
+  float: none;
+  text-align: left;
+  list-style-type: none;
+}
+.botonAgregar {
+  background: #9331b4;
+  float: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  color: #adb5bd;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 35px;
+  margin-left: 15%;
+}
+.botonAgregar :hover {
+  color: #9331b4;
+}
+
+.menuIcon {
+  width: 12%;
+}

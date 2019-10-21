@@ -1,0 +1,13 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+.page {
+  display: grid;
+  grid-template-areas:
+    "head nav"
+    "head  main"
+    "head foot";
+  grid-template-rows: 1fr 4fr 0.05fr;
+  grid-template-columns: 1fr 3fr;
+}

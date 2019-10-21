@@ -1,0 +1,11 @@
+.footerC {
+  grid-area: foot;
+  background-color: #1e1b1f;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
