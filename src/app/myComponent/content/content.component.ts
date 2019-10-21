@@ -21,7 +21,7 @@ export class ContentComponent implements OnInit {
     ];
     let songName = <HTMLElement>document.body.querySelector("#songName");
 
-    main.addEventListener("click", e => {
+   /*  main.addEventListener("click", e => {
       ruta.setAttribute("src", rutas[parseInt(e.target.id)]);
       reproductor.setAttribute("autoplay", "true");
       reproductor.load();
@@ -29,6 +29,6 @@ export class ContentComponent implements OnInit {
         22,
         rutas[parseInt(e.target.id)].length
       );
-    });
+    }) */;
   }
 }
