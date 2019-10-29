@@ -1,0 +1,41 @@
+.body {
+  height: 60%;
+  width: 80%;
+  background-size: cover;
+}
+​ .encima {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.t-encima {
+  display: flex;
+
+  top: 510px;
+  left: 80%;
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  opacity: 0.8;
+  border-radius: 25px;
+  flex-wrap: nowrap;
+  text-align: right;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 900;
+  font-size: 20px;
+
+  color: #ffffff;
+  background-color: rgb(131, 39, 116);
+  border-radius: 6px;
+  border: 2px solid rgb(131, 39, 116);
+}
+.t-encima a {
+  text-decoration: none;
+  color: white;
+}
+​ .t-encima:hover {
+  cursor: pointer;
+  box-shadow: 6px 7px 18px -3px #e0ad93;
+  color: gray;
+}

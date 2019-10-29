@@ -1,0 +1,34 @@
+/* MAQUETADO GENERAL */
+
+#page {
+  display: grid;
+  width: 100%;
+  height: 1000px;
+  grid-template-areas:
+    "head nav"
+    "head  main"
+    "head foot";
+  grid-template-rows: 2fr 4fr 50px;
+  grid-template-columns: 310px 1fr;
+}
+
+.encabezado {
+  grid-area: head;
+  background-color: #343a40;
+}
+
+.navegador {
+  grid-area: nav;
+}
+
+.contenido {
+  grid-area: main;
+}
+
+.pie {
+  grid-area: foot;
+}
+.violet {
+  font-size: 20px;
+  background-color: violet;
+}

@@ -1,0 +1,24 @@
+<section class="page">
+    <div class="encabezado">
+        <selectorHeader></selectorHeader>
+    </div>
+    <div class="navegador">
+        <slider></slider>
+    </div>
+    <div>
+        <ul>
+            <li routerLinkActive="violet">
+                <a routerLink="registro">Registro</a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenido" *ngIf="mostrarContenido">
+        <content></content>
+    </div>
+    <div *ngIf="!mostrarContenido">
+        <app-perfil></app-perfil>
+    </div>
+    <div class="pie">
+        <selectorFooter></selectorFooter>
+    </div>
+</section>

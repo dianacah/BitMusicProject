@@ -1,0 +1,6 @@
+<p>
+    Llamaste al componente usuarios con esta info:
+</p>
+<li *ngFor="let user of personas">
+    <a [routerLink]="['/perfil', user.role, user.nombre]"> Me llamo: {{user.nombre}} y tengo {{user.edad}}</a>
+</li>
