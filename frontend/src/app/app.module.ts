@@ -14,6 +14,8 @@ import { PerfilUsuarioComponent } from "./myComponent/perfil-usuario/perfil-usua
 import { RegistroUsuariosComponent } from "./myComponent/users/registro-usuarios/registro-usuarios.component";
 import { HomeComponent } from "./myComponent/home/home.component";
 import { InicioComponent } from "./myComponent/inicio/inicio.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const routes: Routes = [
   {
@@ -65,7 +67,7 @@ const routes: Routes = [
     HomeComponent,
     InicioComponent
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes), ReactiveFormsModule],
+  imports: [BrowserModule, RouterModule.forRoot(routes), ReactiveFormsModule, BrowserAnimationsModule, MatTabsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
