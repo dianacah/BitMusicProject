@@ -3,26 +3,30 @@
 #page {
   display: grid;
   width: 100%;
-  height: 1000px;
+  height: 100%;
   grid-template-areas:
     "head nav"
     "head  main"
     "head foot";
-  grid-template-rows: 2fr 4fr 50px;
-  grid-template-columns: 310px 1fr;
+  grid-template-rows: 1fr 4fr 0.5fr;
+  grid-template-columns: auto 1fr;
 }
 
 .encabezado {
   grid-area: head;
+  grid-row: 1/4;
   background-color: #343a40;
+  height: 100%;
 }
 
 .navegador {
   grid-area: nav;
+  height: 100%;
 }
 
 .contenido {
   grid-area: main;
+  height: 100%;
 }
 
 .pie {
@@ -31,4 +35,8 @@
 .violet {
   font-size: 20px;
   background-color: violet;
+}
+.mostrarPErfildiv {
+  background-color: #343a40;
+  height: 100%;
 }
