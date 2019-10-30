@@ -1,91 +1,23 @@
-<div *ngIf="mostrar">
-  <div class="divmostrar">
-    <img src="../../../assets/img/FotoPerfil.PNG" alt="" class="imagenPerfil" />
-    <div class="seccionMostarInfo">
-      <div class="contenedorInfo">
-        <div>Nombre:</div>
-        <div>Camila</div>
-        <div>Edad:</div>
-        <div>24</div>
-        <div>Correo electronico:</div>
-        <div>Camila@gmail.com</div>
-      </div>
-      <div class="botonActualizarInfo">Actualizar</div>
+<div class="infoPerfil">
+    <div class="divmostrar">
+        <img src="../../../assets/img/FotoPerfil.PNG" alt="" class="imagenPerfil" />
+        <div class="seccionMostarInfo">
+            <div class="contenedorInfo">
+                <div>Nombre:</div>
+                <div>Camila</div>
+                <div>Edad:</div>
+                <div>24</div>
+                <div>Correo electronico:</div>
+                <div>Camila@gmail.com</div>
+            </div>
+            <div class="botonActualizarInfo" [routerLink]="['/inicio/perfil/actualizarinfo']">Actualizar</div>
+        </div>
     </div>
-  </div>
-  <hr />
-  <div class="publicidadBit">
-    <img src="../../../assets/img/logoBIT.png" alt="" />
-    <h5 class="datosBit">
-      Calle 106a # 17a - 46, bogotá DC <br />(571) 742 6661 <br />bit.institute
-    </h5>
-  </div>
-</div>
-
-<div *ngIf="!mostrar">
-  <div class="divFormularioActualizar">
-    <img
-      src="../../../assets/img/FotoPerfil.PNG"
-      alt=""
-      class="imagenPerfil imagenActualizardatos"
-    />
-    <form
-      [formGroup]="actualizarDatosForm"
-      (ngSubmit)="enviar(registerForm.value)"
-    >
-      <label>Nombre:</label>
-      <input formControlName="name" type="text" />
-      <small
-        class="error"
-        *ngIf="
-          actualizarDatosForm.get('email').hasError('required') &&
-          actualizarDatosForm.get('email').touched
-        "
-        >Este espacio es requerido</small
-      >
-      <br />
-      <label>Edad:</label>
-      <input formControlName="age" type="text" />
-      <small
-        class="error"
-        *ngIf="
-          actualizarDatosForm.get('email').hasError('required') &&
-          actualizarDatosForm.get('email').touched
-        "
-        >Este espacio es requerido</small
-      >
-      <br />
-      <label>
-        Contraseña:
-      </label>
-      <input formControlName="password" type="password" />
-      <small
-        class="error"
-        *ngIf="
-          actualizarDatosForm.get('email').hasError('required') &&
-          actualizarDatosForm.get('email').touched
-        "
-        >Este espacio es requerido</small
-      >
-      <br />
-      <label>Correo electronico:</label>
-      <input formControlName="email" type="email" />
-      <small
-        class="error"
-        *ngIf="
-          actualizarDatosForm.get('email').hasError('required') &&
-          actualizarDatosForm.get('email').touched
-        "
-        >Este espacio es requerido</small
-      >
-      <br />
-      <button type="submit">Guardar cambios</button>
-    </form>
-  </div>
-  <div class="publicidadBit">
-    <img src="../../../assets/img/logoBIT.png" alt="" />
-    <h5 class="datosBit">
-      Calle 106a # 17a - 46, bogotá DC <br />(571) 742 6661 <br />bit.institute
-    </h5>
-  </div>
+    <hr />
+    <div class="publicidadBit">
+        <img src="../../../assets/img/logoBIT.png" alt="" />
+        <h5 class="datosBit">
+            Calle 106a # 17a - 46, bogotá DC <br />(571) 742 6661 <br />bit.institute
+        </h5>
+    </div>
 </div>

@@ -11,22 +11,9 @@ import { ViewEncapsulation } from "@angular/core";
 })
 export class PerfilComponent implements OnInit {
   userInformation: any = [];
-  public mostrar = false;
 
-  constructor(
-    private builder: FormBuilder,
-    private consultaPerfilService: ConsultaPerfilService
-  ) {}
+  constructor(private consultaPerfilService: ConsultaPerfilService) {}
 
-  actualizarDatosForm: FormGroup = this.builder.group({
-    name: ["", Validators.required],
-    age: [
-      "",
-      Validators.compose([Validators.required, Validators.minLength(1)])
-    ],
-    email: ["", Validators.compose([Validators.required, Validators.email])],
-    password: ["", Validators.required]
-  });
   ngOnInit() {
     this.consultaPerfilService.getPerfilInformation().subscribe(response => {
       console.log(response);
