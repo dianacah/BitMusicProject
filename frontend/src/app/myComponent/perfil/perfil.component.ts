@@ -1,3 +1,4 @@
+import { ConsultaPerfilService } from "./../../servicios/consulta-perfil/consulta-perfil.service";
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ViewEncapsulation } from "@angular/core";
@@ -10,8 +11,12 @@ import { ViewEncapsulation } from "@angular/core";
 })
 export class PerfilComponent implements OnInit {
   mostrar = false;
+  userInformation: any = [];
 
-  constructor(private builder: FormBuilder) {}
+  constructor(
+    private builder: FormBuilder,
+    private consultaPerfilService: ConsultaPerfilService
+  ) {}
 
   actualizarDatosForm: FormGroup = this.builder.group({
     name: ["", Validators.required],
@@ -22,5 +27,9 @@ export class PerfilComponent implements OnInit {
     email: ["", Validators.compose([Validators.required, Validators.email])],
     password: ["", Validators.required]
   });
-  ngOnInit() {}
+  ngOnInit() {
+    this.consultaPerfilService.getPerfilInformation().subscribe(response => {
+      console.log(response);
+    });
+  }
 }

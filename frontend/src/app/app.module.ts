@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from "./app.component";
 import { SliderComponent } from "./myComponent/slider/slider.component";
@@ -14,8 +15,8 @@ import { PerfilUsuarioComponent } from "./myComponent/perfil-usuario/perfil-usua
 import { RegistroUsuariosComponent } from "./myComponent/users/registro-usuarios/registro-usuarios.component";
 import { HomeComponent } from "./myComponent/home/home.component";
 import { InicioComponent } from "./myComponent/inicio/inicio.component";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatTabsModule } from "@angular/material/tabs";
 
 const routes: Routes = [
   {
@@ -67,7 +68,14 @@ const routes: Routes = [
     HomeComponent,
     InicioComponent
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes), ReactiveFormsModule, BrowserAnimationsModule, MatTabsModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
