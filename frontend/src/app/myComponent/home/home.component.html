@@ -2,7 +2,7 @@
   ​<mat-tab-group class="tabGroup" mat-align-tabs="center">
     <mat-tab label="Inicia sesión">
       <form [formGroup]="ingresoForm" (ngSubmit)="enviar(registerForm.value)">
-        <p class="title">¡Bienvenido!</p>
+        <p class="title">Bienvenido</p>
         <input placeholder="Correo" formControlName="email" type="email" />
         <small class="error" *ngIf="ingresoForm.get('email').hasError('required')&&ingresoForm.get('email').touched">Este espacio es requerido</small>
         <br />
@@ -18,7 +18,7 @@
     </mat-tab>
     <mat-tab label="Regístrate">
       <form [formGroup]="ingresoForm" (ngSubmit)="enviar(registerForm.value)">
-        <p class="title">Regístrate para disfrutar de música gratis</p>
+        <p class="title">Regístrate</p>
         <input
           placeholder="Nombre completo"
           formControlName="name"
