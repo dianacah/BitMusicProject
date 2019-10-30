@@ -13,7 +13,7 @@
         />
         <small class="error" *ngIf="ingresoForm.get('email').hasError('required')&&ingresoForm.get('email').touched">Este espacio es requerido</small>
         <br />
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit" routerLink="/inicio">Iniciar sesión</button>
       </form>
     </mat-tab>
     <mat-tab label="Regístrate">
@@ -43,7 +43,7 @@
         />
         <small class="error" *ngIf="ingresoForm.get('email').hasError('required')&&ingresoForm.get('email').touched">Este espacio es requerido</small>
         <br />
-        <button type="submit">Registrarse</button>
+        <button type="submit" routerLink="/inicio">Registrarse</button>
       </form>
     </mat-tab>
   </mat-tab-group>
