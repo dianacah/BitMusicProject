@@ -15,10 +15,10 @@ usuariosRoute.post("/usuarios", (req, res, next) => {
 
 //GET
 
-usuariosRoute.get("/usuarios/:title", (req, res, next) => {
-    Usuarios.findOne({ title: req.params.title }, req.body)
+usuariosRoute.get("/usuarios/:name", (req, res, next) => {
+    Usuarios.findOne({ name: req.params.name }, req.body)
         .then(() => {
-            const usuarios = Usuarios.findOne({ title: req.params.title });
+            const usuarios = Usuarios.findOne({ name: req.params.name });
             return usuarios;
         }).then(usuarios => {
             res.status(200).send(`llamado exitoso ${usuarios}`);
@@ -28,10 +28,10 @@ usuariosRoute.get("/usuarios/:title", (req, res, next) => {
 
 //PUT 
 
-usuariosRoute.put("/usuarios/:title", (req, res, next) => {
-    Usuarios.findOneAndUpdate({ title: req.params.title }, req.body)
+usuariosRoute.put("/usuarios/:name", (req, res, next) => {
+    Usuarios.findOneAndUpdate({ name: req.params.name }, req.body)
         .then(() => {
-            const usuarios = Usuarios.findOne({ title: req.params.title });
+            const usuarios = Usuarios.findOne({ name: req.params.name });
             return usuarios;
         }).then(usuarios => {
             res.send(`Actualización exitosa ${usuarios}`);
@@ -40,8 +40,8 @@ usuariosRoute.put("/usuarios/:title", (req, res, next) => {
 
 //DELETE 
 
-usuariosRoute.delete("/usuarios/:title", (req, res, next) => {
-    Usuarios.findOneAndDelete({ title: req.params.title }).then(usuarios => {
+usuariosRoute.delete("/usuarios/:name", (req, res, next) => {
+    Usuarios.findOneAndDelete({ name: req.params.name }).then(usuarios => {
         res.send('Borrado exitoso ' + usuarios);
     }).catch.next;
 });
