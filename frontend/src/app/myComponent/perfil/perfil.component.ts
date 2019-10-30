@@ -9,7 +9,7 @@ import { ViewEncapsulation } from "@angular/core";
   encapsulation: ViewEncapsulation.None
 })
 export class PerfilComponent implements OnInit {
-  mostrar = false;
+  public mostrar = false;
 
   constructor(private builder: FormBuilder) {}
 

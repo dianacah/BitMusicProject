@@ -15,7 +15,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
 }
 .home,
@@ -29,6 +29,12 @@
   text-align: left;
   list-style-type: none;
 }
+.home:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  text-shadow: 2px 2px 2px black;
+}
+
 .botonAgregar {
   background: #9331b4;
   text-align: center;
@@ -44,4 +50,16 @@
   cursor: pointer;
   box-shadow: 4px 6px 13px -4px #d6c2b8;
   transform: scale(1.05);
+}
+.infoPerfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.divinfoPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

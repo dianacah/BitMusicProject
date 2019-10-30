@@ -2,13 +2,31 @@
   height: 100%;
 }
 .divmostrar {
-  background-color: #343a40;
+  background: url(../../../assets/img/lineas8.jpg);
+  /*   background-color: #343a40
+; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 600px;
+  animation: movimiento 20s infinite linear alternate;
+  text-shadow: 2px 2px 2px black;
+}
+@keyframes movimiento {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: bottom right;
+  }
+  /*    0%{
+   opacity: 0.5;
+ }
+ 100% {
+   opacity: 0.1;
+ }  */
 }
 .contenedorInfo {
   height: 50%;
@@ -17,7 +35,7 @@
   grid-template-columns: 0.3fr 2fr;
   grid-template-rows: repeat(auto-fill, 50px);
   gap: 5px;
-  background-color: rgba(182, 179, 179, 0.356);
+  background-color: rgba(182, 179, 179, 0.63);
   color: white;
   border-radius: 10px;
   padding: 20px;
@@ -25,6 +43,7 @@
   padding-top: 40px;
   font-size: 20px;
   box-shadow: 2px 7px 24px 0px black;
+  font-family: "Roboto", sans-serif;
 }
 .imagenPerfil {
   width: 35%;
@@ -56,9 +75,16 @@
   align-items: center;
   margin-top: 100px;
 }
-
-/* Formulario Actualizacion Datos */
-
+.publicidad {
+  background: pink;
+  height: 100px;
+}
+.uno {
+  background: red;
+}
+.dos {
+  background: red;
+} /* Formulario Actualizacion Datos */
 input {
   border-radius: 1%;
   border: 1px solid lightgray;
@@ -67,17 +93,28 @@ input {
   margin: 0 0 5px 0;
   font-family: "Roboto", sans-serif;
   border-radius: 10px;
+  box-shadow: 2px 6px 26px black;
+}
+input:hover {
+  color: white;
 }
 button {
   font-family: "Roboto", sans-serif;
   border: none;
   border-radius: 20px;
   height: 50px;
-  width: 150px;
+  width: 200px;
   background-color: #9331b4;
   color: white;
   font-size: 16px;
   margin-top: 20px;
+  font-size: 20px;
+}
+button:hover {
+  color: white;
+  cursor: pointer;
+  box-shadow: 4px 6px 13px -4px #d6c2b8;
+  transform: scale(1.05);
 }
 form {
   display: grid;
@@ -93,9 +130,13 @@ label {
   font-family: "Roboto", sans-serif;
   margin: 10px;
   width: min-content;
+  font-size: 20px;
+}
+input:hover {
+  transform: scale(1.05);
 }
 small {
-  color: #f0134d;
+  color: white;
 }
 .divFormularioActualizar {
   display: flex;
@@ -103,8 +144,20 @@ small {
   align-items: center;
   width: 100%;
   padding: 10px;
+  background: url(../../../assets/img/prumosaico.jpg);
+  height: 600px;
 }
 .imagenActualizardatos {
-  margin-top: 50px;
+  margin-top: 60px;
   align-self: flex-start;
+}
+
+.publicidadBit {
+  margin-top: 25px;
+  margin-left: 25px;
+  padding-bottom: 50px;
+}
+.datosBit {
+  color: white;
+  font-family: "Open Sans", sans-serif;
 }
