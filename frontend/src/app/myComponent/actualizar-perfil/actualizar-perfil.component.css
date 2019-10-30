@@ -1,4 +1,4 @@
-.infoPerfil {
+.actualizarInfo {
   background-color: #343a40;
 }
 
@@ -7,7 +7,8 @@
 }
 .divmostrar {
   background: url(../../../assets/img/lineas8.jpg);
-  /* background-color: #343a40; */
+  /*   background-color: #343a40
+; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

@@ -17,6 +17,7 @@ import { HomeComponent } from "./myComponent/home/home.component";
 import { InicioComponent } from "./myComponent/inicio/inicio.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatTabsModule } from "@angular/material/tabs";
+import { ActualizarPerfilComponent } from "./myComponent/actualizar-perfil/actualizar-perfil.component";
 
 const routes: Routes = [
   {
@@ -30,19 +31,30 @@ const routes: Routes = [
   },
   {
     path: "inicio",
-    component: InicioComponent
+    component: InicioComponent,
+    children: [
+      {
+        path: "perfil",
+        children: [
+          {
+            path: "informacion",
+            component: PerfilComponent
+          },
+          {
+            path: "actualizarinfo",
+            component: ActualizarPerfilComponent
+          }
+        ]
+      },
+      {
+        path: "contenido",
+        component: ContentComponent
+      }
+    ]
   },
   {
     path: "registro",
     component: RegistroUsuariosComponent
-  },
-  {
-    path: "perfil",
-    component: PerfilComponent
-  },
-  {
-    path: "contenido",
-    component: ContentComponent
   },
   {
     path: "usuarios",
@@ -66,7 +78,8 @@ const routes: Routes = [
     PerfilUsuarioComponent,
     RegistroUsuariosComponent,
     HomeComponent,
-    InicioComponent
+    InicioComponent,
+    ActualizarPerfilComponent
   ],
   imports: [
     BrowserModule,
