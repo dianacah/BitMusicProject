@@ -1,8 +1,8 @@
 <div class="body">
-  ​<mat-tab-group class="tabGroup">
+  ​<mat-tab-group class="tabGroup" mat-align-tabs="center">
     <mat-tab label="Inicia sesión">
       <form [formGroup]="ingresoForm" (ngSubmit)="enviar(registerForm.value)">
-        <h3 class="title">¡Bienvenid@!</h3>
+        <p class="title">Bienvenido</p>
         <input placeholder="Correo" formControlName="email" type="email" />
         <small class="error" *ngIf="ingresoForm.get('email').hasError('required')&&ingresoForm.get('email').touched">Este espacio es requerido</small>
         <br />
@@ -13,28 +13,28 @@
         />
         <small class="error" *ngIf="ingresoForm.get('email').hasError('required')&&ingresoForm.get('email').touched">Este espacio es requerido</small>
         <br />
-        <button type="submit">Inicia sesión</button>
+        <button type="submit">Iniciar sesión</button>
       </form>
     </mat-tab>
     <mat-tab label="Regístrate">
       <form [formGroup]="ingresoForm" (ngSubmit)="enviar(registerForm.value)">
-        <h3 class="title">Regístrate para disfrutar de música gratis</h3>
+        <p class="title">Regístrate</p>
         <input
           placeholder="Nombre completo"
           formControlName="name"
           type="text"
         />
-        <small class="error" *ngIf="ingresoForm.get('email').hasError('required')&&ingresoForm.get('email').touched">Este espacio es requerido</small>
+        <small class="error" *ngIf="ingresoForm.get('name').hasError('required')&&ingresoForm.get('name').touched">Este espacio es requerido</small>
         <br />
         <input placeholder="Edad" formControlName="age" type="text" />
-        <small class="error" *ngIf="ingresoForm.get('email').hasError('required')&&ingresoForm.get('email').touched">Este espacio es requerido</small>
+        <small class="error" *ngIf="ingresoForm.get('age').hasError('required')&&ingresoForm.get('age').touched">Este espacio es requerido</small>
         <br />
         <input
           placeholder="Contraseña"
           formControlName="password"
           type="password"
         />
-        <small class="error" *ngIf="ingresoForm.get('email').hasError('required')&&ingresoForm.get('email').touched">Este espacio es requerido</small>
+        <small class="error" *ngIf="ingresoForm.get('password').hasError('required')&&ingresoForm.get('password').touched">Este espacio es requerido</small>
         <br />
         <input
           placeholder="Correo electrónico"
@@ -43,7 +43,7 @@
         />
         <small class="error" *ngIf="ingresoForm.get('email').hasError('required')&&ingresoForm.get('email').touched">Este espacio es requerido</small>
         <br />
-        <button type="submit">Registro</button>
+        <button type="submit">Registrarse</button>
       </form>
     </mat-tab>
   </mat-tab-group>

@@ -1,26 +1,30 @@
+* {
+  overflow:hidden;
+}
 .body {
-  background-image: url(../../../assets/img/portada.PNG);
+  background-image: url(../../../assets/img/portada.jpg);
   min-height:100vh;
   background-size: cover;
   background-position:center;
   display:flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 mat-tab-group {
   border-radius: 1%;
 }
 .tabGroup {
-  width:40vw;
-  height:70vh;
-  background-color:white;
+  width:35vw;
+  height:85vh;
+  /* background-color:rgba(0,0,0, 0.1); */
+  background-color:rgba(255,255,255, 1);
 }
 input {
-  border-radius: 1%;
+  border-radius: 5rem;
   border: 1px solid lightgray;
   padding: 15px;
-  width:50%;
+  width:80%;
   margin: 0 0 5px 0;
   font-family: "Roboto", sans-serif;
 }
@@ -32,23 +36,40 @@ mat-tab {
 button {
   font-family: "Roboto", sans-serif;
   border:none;
-  border-radius: 5%;
-  height:50px;
-  width:150px;
-  background-color: #f0134d;
+  border-radius: 5rem;
+  height:45px;
+  width:50%;
+  /* background-color: #f0134d; */
   color:white;
   font-size: 16px;
+  cursor:pointer;
+  background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,218,1) 50%, rgba(252,176,69,1) 100%);
+font-weight: 100;
 }
 form {
   display:flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  margin-top:5%;
+  /* margin-left:15%; */
 }
 .title {
   margin-bottom: 4%;
+  color: lightgray;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size:40px;
+  align-self: left;
 }
 .mat-tab-label 
 .mat-tab-label-content {
   font-family: "Roboto", sans-serif;
+  color:lightgray;
+  font-size:18px;
+  font-weight: 100;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: rgba(253,29,218,1);
 }
