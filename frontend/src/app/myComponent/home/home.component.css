@@ -51,7 +51,7 @@ button {
   );
   font-weight: 100;
 }
-form {
+.homeForm {
   display: flex;
   flex-direction: column;
   justify-items: center;
