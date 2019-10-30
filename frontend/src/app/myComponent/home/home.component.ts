@@ -16,9 +16,11 @@ export class HomeComponent implements OnInit {
   ingresoForm:FormGroup =this.builder.group({
     name:['', Validators.required],
     age:['', Validators.compose([Validators.required,Validators.minLength(1)])],
-    email: ['', Validators.compose([Validators.required, Validators.email])],
-    password: ['', Validators.required]
-
+    emailLog: ['', Validators.compose([Validators.required, Validators.email])],
+    passwordLog: ['', Validators.required],
+    emailSign: ['', Validators.compose([Validators.required,Validators.email])],
+    passwordSign: ['', Validators.required],
+    
   })
 
   enviar(ingresoForm) {
