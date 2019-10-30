@@ -6,7 +6,7 @@ import { Observable } from "rxjs";
   providedIn: "root"
 })
 export class ConsultaPerfilService {
-  private url = "localhost:3000/api/usuarios";
+  private url = "http://localhost:3000/api/usuarios/nombre2";
 
   constructor(private http: HttpClient) {}
 

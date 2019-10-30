@@ -1,102 +1,107 @@
 <div class="wrapper">
-<div class="body">
-  ​<mat-tab-group class="tabGroup" mat-align-tabs="center">
-    <mat-tab label="Inicia sesión">
-      <form
-        class="homeForm"
-        [formGroup]="ingresoForm"
-        (ngSubmit)="enviar(registerForm.value)"
-      >
-        <p class="title">Bienvenido</p>
-        <input placeholder="Correo" formControlName="emailLog" type="email" />
-        <small
-          class="error"
-          *ngIf="
-            ingresoForm.get('emailLog').hasError('required') &&
-            ingresoForm.get('emailLog').touched
-          "
-          >Este espacio es requerido</small
+  <div class="body">
+    ​<mat-tab-group class="tabGroup" mat-align-tabs="center">
+      <mat-tab label="Inicia sesión">
+        <form
+          class="homeForm"
+          [formGroup]="ingresoForm"
+          (ngSubmit)="enviar(registerForm.value)"
         >
-        <br />
-        <input
-          placeholder="Contraseña"
-          formControlName="passwordLog"
-          type="password"
-        />
-        <small
-          class="error"
-          *ngIf="
-            ingresoForm.get('passwordLog').hasError('required') &&
-            ingresoForm.get('passwordLog').touched
-          "
-          >Este espacio es requerido</small
+          <p class="title">Bienvenido</p>
+          <input placeholder="Correo" formControlName="emailLog" type="email" />
+          <small
+            class="error"
+            *ngIf="
+              ingresoForm.get('emailLog').hasError('required') &&
+              ingresoForm.get('emailLog').touched
+            "
+            >Este espacio es requerido</small
+          >
+          <br />
+          <input
+            placeholder="Contraseña"
+            formControlName="passwordLog"
+            type="password"
+          />
+          <small
+            class="error"
+            *ngIf="
+              ingresoForm.get('passwordLog').hasError('required') &&
+              ingresoForm.get('passwordLog').touched
+            "
+            >Este espacio es requerido</small
+          >
+          <br />
+          <button type="submit" routerLink="/inicio/contenido">
+            Iniciar sesión
+          </button>
+        </form>
+      </mat-tab>
+      <mat-tab label="Regístrate">
+        <form
+          class="homeForm"
+          [formGroup]="ingresoForm"
+          (ngSubmit)="enviar(registerForm.value)"
         >
-        <br />
-        <button type="submit" routerLink="/inicio">Iniciar sesión</button>
-      </form>
-    </mat-tab>
-    <mat-tab label="Regístrate">
-      <form
-        class="homeForm"
-        [formGroup]="ingresoForm"
-        (ngSubmit)="enviar(registerForm.value)"
-      >
-        <p class="title">Regístrate</p>
-        <input
-          placeholder="Nombre completo"
-          formControlName="name"
-          type="text"
-        />
-        <small
-          class="error"
-          *ngIf="
-            ingresoForm.get('name').hasError('required') &&
-            ingresoForm.get('name').touched
-          "
-          >Este espacio es requerido</small
-        >
-        <br />
-        <input placeholder="Edad" formControlName="age" type="text" />
-        <small
-          class="error"
-          *ngIf="
-            ingresoForm.get('age').hasError('required') &&
-            ingresoForm.get('age').touched
-          "
-          >Este espacio es requerido</small
-        >
-        <br />
-        <input
-          placeholder="Correo electrónico"
-          formControlName="emailSign"
-          type="email"
-        />
-        <small
-          class="error"
-          *ngIf="
-            ingresoForm.get('emailSign').hasError('required') &&
-            ingresoForm.get('emailSign').touched
-          "
-          >Este espacio es requerido</small
-        >
-        <br />
-        <input
-          placeholder="Contraseña"
-          formControlName="passwordSign"
-          type="password"
-        />
-        <small
-          class="error"
-          *ngIf="
-            ingresoForm.get('passwordSign').hasError('required') &&
-            ingresoForm.get('passwordSign').touched
-          "
-          >Este espacio es requerido</small
-        >
-        <br />
-        <button type="submit" routerLink="/inicio">Registrarse</button>
-      </form>
-    </mat-tab>
-  </mat-tab-group>
+          <p class="title">Regístrate</p>
+          <input
+            placeholder="Nombre completo"
+            formControlName="name"
+            type="text"
+          />
+          <small
+            class="error"
+            *ngIf="
+              ingresoForm.get('name').hasError('required') &&
+              ingresoForm.get('name').touched
+            "
+            >Este espacio es requerido</small
+          >
+          <br />
+          <input placeholder="Edad" formControlName="age" type="text" />
+          <small
+            class="error"
+            *ngIf="
+              ingresoForm.get('age').hasError('required') &&
+              ingresoForm.get('age').touched
+            "
+            >Este espacio es requerido</small
+          >
+          <br />
+          <input
+            placeholder="Correo electrónico"
+            formControlName="emailSign"
+            type="email"
+          />
+          <small
+            class="error"
+            *ngIf="
+              ingresoForm.get('emailSign').hasError('required') &&
+              ingresoForm.get('emailSign').touched
+            "
+            >Este espacio es requerido</small
+          >
+          <br />
+          <input
+            placeholder="Contraseña"
+            formControlName="passwordSign"
+            type="password"
+          />
+          <small
+            class="error"
+            *ngIf="
+              ingresoForm.get('passwordSign').hasError('required') &&
+              ingresoForm.get('passwordSign').touched
+            "
+            >Este espacio es requerido</small
+          >
+          <br />
+          <button type="submit" routerLink="/inicio/contenido">
+            Registrarse
+          </button>
+        </form>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  ​
 </div>
-​</div>

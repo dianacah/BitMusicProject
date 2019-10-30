@@ -14,9 +14,14 @@ export class PerfilComponent implements OnInit {
 
   constructor(private consultaPerfilService: ConsultaPerfilService) {}
 
-  ngOnInit() {
+  obtener() {
     this.consultaPerfilService.getPerfilInformation().subscribe(response => {
-      console.log(response);
+      this.userInformation = response;
+      console.log(this.userInformation);
     });
+  }
+
+  ngOnInit() {
+    this.obtener();
   }
 }

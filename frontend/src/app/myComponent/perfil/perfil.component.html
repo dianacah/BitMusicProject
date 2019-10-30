@@ -1,23 +1,28 @@
 <div class="infoPerfil">
-    <div class="divmostrar">
-        <img src="../../../assets/img/FotoPerfil.PNG" alt="" class="imagenPerfil" />
-        <div class="seccionMostarInfo">
-            <div class="contenedorInfo">
-                <div>Nombre:</div>
-                <div>Camila</div>
-                <div>Edad:</div>
-                <div>24</div>
-                <div>Correo electronico:</div>
-                <div>Camila@gmail.com</div>
-            </div>
-            <div class="botonActualizarInfo" [routerLink]="['/inicio/perfil/actualizarinfo']">Actualizar</div>
-        </div>
+  <div class="divmostrar">
+    <img src="../../../assets/img/FotoPerfil.PNG" alt="" class="imagenPerfil" />
+    <div class="seccionMostarInfo">
+      <div class="contenedorInfo">
+        <div *ngFor="let datos of userInformation">{{ datos.name }}</div>
+        <div>Camila</div>
+        <div>Edad:</div>
+        <div>24</div>
+        <div>Correo electronico:</div>
+        <div>Camila@gmail.com</div>
+      </div>
+      <div
+        class="botonActualizarInfo"
+        [routerLink]="['/inicio/perfil/actualizarinfo']"
+      >
+        Actualizar
+      </div>
     </div>
-    <hr />
-    <div class="publicidadBit">
-        <img src="../../../assets/img/logoBIT.png" alt="" />
-        <h5 class="datosBit">
-            Calle 106a # 17a - 46, bogotá DC <br />(571) 742 6661 <br />bit.institute
-        </h5>
-    </div>
+  </div>
+  <hr />
+  <div class="publicidadBit">
+    <img src="../../../assets/img/logoBIT.png" alt="" />
+    <h5 class="datosBit">
+      Calle 106a # 17a - 46, bogotá DC <br />(571) 742 6661 <br />bit.institute
+    </h5>
+  </div>
 </div>
