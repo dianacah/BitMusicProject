@@ -5,17 +5,16 @@
     </h1>
     <hr />
   </div>
-  <div class="cancion">
-    <img
-      src="../../../assets/img/imagencancion1.jpg"
-      alt=""
-      class="imgCancion"
-      id="0"
-    />
-    <h1 class="nombre">Gan-Ga</h1>
-    <p class="artista">Bryant Myers</p>
+  <div
+    class="cancion"
+    *ngFor="let cancion of listaCanciones"
+    (click)="reproducir(cancion)"
+  >
+    <img [src]="cancion.image" alt="" class="imgCancion" id="0" />
+    <h1 class="nombre">{{ cancion.title }}</h1>
+    <p class="artista">{{ cancion.artist }}</p>
   </div>
-  <div class="cancion">
+  <!-- <div class="cancion">
     <img
       src="../../../assets/img/imagencancion2.jpg"
       alt=""
@@ -54,7 +53,7 @@
     />
     <h1 class="nombre">Safe and Sound</h1>
     <p class="artista">Burgundy Skies</p>
-  </div>
+  </div> -->
   <div class="tituloFavs sectionTitle">
     <h1 class="sectionTitle">Tus Favoritos</h1>
     <hr />

@@ -4,7 +4,6 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ViewEncapsulation } from "@angular/core";
 import { StoreService } from "./../../servicios/store/store.service";
 
-
 @Component({
   selector: "app-perfil",
   templateUrl: "./perfil.component.html",
@@ -20,7 +19,7 @@ export class PerfilComponent implements OnInit {
   constructor(
     private consultaPerfilService: ConsultaPerfilService,
     private storeService: StoreService
-    ) {}
+  ) {}
 
   obtener(datosIngreso) {
     this.consultaPerfilService
@@ -32,8 +31,8 @@ export class PerfilComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.obtener("lorena@gamil.com");
-    const user = this.storeService.getUser()
+    this.obtener("lorena@gmail.com");
+    const user = this.storeService.getUser();
     this.name = user.name;
     this.age = user.age;
     this.email = user.email;

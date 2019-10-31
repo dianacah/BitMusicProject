@@ -48,7 +48,7 @@ cancionesRoute.get("/canciones", (req, res, next) => {
       return canciones;
     })
     .then(canciones => {
-      res.status(200).send(`llamado exitoso ${canciones}`);
+      res.status(200).send(canciones);
     })
     .catch(next);
 });
