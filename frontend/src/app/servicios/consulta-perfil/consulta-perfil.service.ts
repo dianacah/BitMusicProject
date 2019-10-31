@@ -6,11 +6,11 @@ import { Observable } from "rxjs";
   providedIn: "root"
 })
 export class ConsultaPerfilService {
-  private url = "http://localhost:3000/api/usuarios/nombre2";
+  private url = "http://localhost:3000/api/usuarios/";
 
   constructor(private http: HttpClient) {}
 
-  getPerfilInformation() {
-    return this.http.get(this.url);
+  getPerfilInformation(emailLog) {
+    return this.http.get(this.url + emailLog);
   }
 }

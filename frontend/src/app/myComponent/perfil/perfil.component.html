@@ -3,12 +3,12 @@
     <img src="../../../assets/img/FotoPerfil.PNG" alt="" class="imagenPerfil" />
     <div class="seccionMostarInfo">
       <div class="contenedorInfo">
-        <div *ngFor="let datos of userInformation">{{ datos.name }}</div>
-        <div>Camila</div>
+        <div>Nombre:</div>
+        <div>{{ userInformation.name }}</div>
         <div>Edad:</div>
-        <div>24</div>
+        <div>{{ userInformation.age }}</div>
         <div>Correo electronico:</div>
-        <div>Camila@gmail.com</div>
+        <div>{{ userInformation.email }}</div>
       </div>
       <div
         class="botonActualizarInfo"

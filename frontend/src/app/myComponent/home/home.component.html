@@ -32,7 +32,11 @@
             >Este espacio es requerido</small
           >
           <br />
-          <button type="submit" routerLink="/inicio/contenido">
+          <button
+            type="submit"
+            routerLink="/inicio/contenido"
+            (click)="obtener(ingresoForm)"
+          >
             Iniciar sesión
           </button>
         </form>
@@ -70,33 +74,37 @@
           <br />
           <input
             placeholder="Correo electrónico"
-            formControlName="emailSign"
+            formControlName="email"
             type="email"
           />
           <small
             class="error"
             *ngIf="
-              ingresoForm.get('emailSign').hasError('required') &&
-              ingresoForm.get('emailSign').touched
+              ingresoForm.get('email').hasError('required') &&
+              ingresoForm.get('email').touched
             "
             >Este espacio es requerido</small
           >
           <br />
           <input
             placeholder="Contraseña"
-            formControlName="passwordSign"
+            formControlName="password"
             type="password"
           />
           <small
             class="error"
             *ngIf="
-              ingresoForm.get('passwordSign').hasError('required') &&
-              ingresoForm.get('passwordSign').touched
+              ingresoForm.get('password').hasError('required') &&
+              ingresoForm.get('password').touched
             "
             >Este espacio es requerido</small
           >
           <br />
-          <button type="submit" routerLink="/inicio/contenido">
+          <button
+            type="submit"
+            routerLink="/inicio/contenido"
+            (click)="enviar(ingresoForm)"
+          >
             Registrarse
           </button>
         </form>

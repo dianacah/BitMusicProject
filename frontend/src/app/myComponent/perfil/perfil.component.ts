@@ -14,14 +14,16 @@ export class PerfilComponent implements OnInit {
 
   constructor(private consultaPerfilService: ConsultaPerfilService) {}
 
-  obtener() {
-    this.consultaPerfilService.getPerfilInformation().subscribe(response => {
-      this.userInformation = response;
-      console.log(this.userInformation);
-    });
+  obtener(datosIngreso) {
+    this.consultaPerfilService
+      .getPerfilInformation(datosIngreso)
+      .subscribe(response => {
+        this.userInformation = response;
+        console.log(this.userInformation);
+      });
   }
 
   ngOnInit() {
-    this.obtener();
+    this.obtener("lorena@gamil.com");
   }
 }
