@@ -1,0 +1,67 @@
+  <form
+    class="homeForm"
+    [formGroup]="registerForm"
+    (ngSubmit)="enviar(registerForm.value)"
+  >
+    <p class="title">Regístrate</p>
+    <input
+      placeholder="Nombre completo"
+      formControlName="name"
+      type="text"
+    />
+    <small
+      class="error"
+      *ngIf="
+      registerForm.get('name').hasError('required') &&
+      registerForm.get('name').touched
+      "
+      >Este espacio es requerido</small
+    >
+    <br />
+    <input placeholder="Edad" formControlName="age" type="text" />
+    <small
+      class="error"
+      *ngIf="
+      registerForm.get('age').hasError('required') &&
+      registerForm.get('age').touched
+      "
+      >Este espacio es requerido</small
+    >
+    <br />
+    <input
+      placeholder="Correo electrónico"
+      formControlName="email"
+      type="email"
+    />
+    <small
+      class="error"
+      *ngIf="
+        registerForm.get('email').hasError('required') &&
+        registerForm.get('email').touched
+      "
+      >Este espacio es requerido</small
+    >
+    <br />
+    <input
+      placeholder="Contraseña"
+      formControlName="password"
+      type="password"
+    />
+    <small
+      class="error"
+      *ngIf="
+        registerForm.get('password').hasError('required') &&
+        registerForm.get('password').touched
+      "
+      >Este espacio es requerido</small
+    >
+    <br />
+    <button
+      type="submit"
+      routerLink="/inicio/contenido"
+      (click)="enviar(registerForm)"
+    >
+      Registrarse
+    </button>
+</form>
+

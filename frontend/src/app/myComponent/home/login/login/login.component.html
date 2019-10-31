@@ -1,0 +1,38 @@
+<form
+    class="homeForm"
+    [formGroup]="ingresoForm"
+    (ngSubmit)="enviar(registerForm.value)">
+    <p class="title">Bienvenido</p>
+    <input placeholder="Correo" formControlName="emailLog" type="email" />
+    <small
+      class="error"
+      *ngIf="
+        ingresoForm.get('emailLog').hasError('required') &&
+        ingresoForm.get('emailLog').touched
+      "
+      >Este espacio es requerido</small
+    >
+    <br />
+    <input
+      placeholder="Contraseña"
+      formControlName="passwordLog"
+      type="password"
+    />
+    <small
+      class="error"
+      *ngIf="
+        ingresoForm.get('passwordLog').hasError('required') &&
+        ingresoForm.get('passwordLog').touched
+      "
+      >Este espacio es requerido</small
+    >
+    <br />
+    <button
+      type="submit"
+      routerLink="/inicio/contenido"
+      (click)="obtener(ingresoForm)"
+    >
+      Iniciar sesión
+    </button>
+  </form>
+

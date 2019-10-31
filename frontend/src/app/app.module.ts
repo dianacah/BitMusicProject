@@ -18,6 +18,10 @@ import { InicioComponent } from "./myComponent/inicio/inicio.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatTabsModule } from "@angular/material/tabs";
 import { ActualizarPerfilComponent } from "./myComponent/actualizar-perfil/actualizar-perfil.component";
+import { RegistroComponent } from "./myComponent/home/registro/registro/registro.component";
+import { LoginComponent } from "./myComponent/home/login/login/login.component";
+
+
 
 const routes: Routes = [
   {
@@ -79,7 +83,9 @@ const routes: Routes = [
     RegistroUsuariosComponent,
     HomeComponent,
     InicioComponent,
-    ActualizarPerfilComponent
+    ActualizarPerfilComponent,
+    RegistroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,8 @@ import { ConsultaPerfilService } from "./../../servicios/consulta-perfil/consult
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ViewEncapsulation } from "@angular/core";
+import { StoreService } from "./../../servicios/store/store.service";
+
 
 @Component({
   selector: "app-perfil",
@@ -11,8 +13,14 @@ import { ViewEncapsulation } from "@angular/core";
 })
 export class PerfilComponent implements OnInit {
   userInformation: any = [];
+  public name;
+  public email;
+  public age;
 
-  constructor(private consultaPerfilService: ConsultaPerfilService) {}
+  constructor(
+    private consultaPerfilService: ConsultaPerfilService,
+    private storeService: StoreService
+    ) {}
 
   obtener(datosIngreso) {
     this.consultaPerfilService
@@ -25,5 +33,10 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit() {
     this.obtener("lorena@gamil.com");
+    const user = this.storeService.getUser()
+    this.name = user.name;
+    this.age = user.age;
+    this.email = user.email;
+    //estas variables son las que se pintan en el html
   }
 }
