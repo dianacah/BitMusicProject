@@ -1,4 +1,12 @@
-import { Component, OnInit, EventEmitter } from "@angular/core";
+import { element } from "protractor";
+import {
+  Component,
+  OnInit,
+  EventEmitter,
+  ViewChild,
+  Directive,
+  ElementRef
+} from "@angular/core";
 import { TraerCancionesService } from "./../../servicios/traer-canciones/traer-canciones.service";
 import { ViewEncapsulation } from "@angular/core";
 import { StoreSongsService } from "./../../servicios/store-songs/store-songs.service";
@@ -10,6 +18,7 @@ import { StoreSongsService } from "./../../servicios/store-songs/store-songs.ser
   encapsulation: ViewEncapsulation.None
 })
 export class ContentComponent implements OnInit {
+  audio = document.querySelector("audio");
   constructor(
     private traerCancionesService: TraerCancionesService,
     private storeSongsService: StoreSongsService
@@ -23,9 +32,13 @@ export class ContentComponent implements OnInit {
     });
   }
   reproducir(rutaCancion) {
+    const ruta = document.querySelector("source");
+    const audio = document.querySelector("audio");
     console.log(rutaCancion.file);
-    let servicio = this.storeSongsService.setSong(rutaCancion.file);
-    console.log(servicio);
+    ruta.setAttribute("src", rutaCancion.file);
+    audio.load();
+    /* let servicio = this.storeSongsService.setSong(rutaCancion.file);
+    console.log(servicio); */
     /* let rutaCancionReproducir = new EventEmitter<string>(); */
   }
   ngOnInit() {
