@@ -4,13 +4,13 @@
     <div class="seccionMostarInfo">
       <div class="contenedorInfo">
         <div>Nombre:</div>
-        <div>{{ userInformation.name }}</div>
-        <div>Edad:</div>
-        <div>{{ userInformation.age }}</div>
+         <div>{{name}}</div>
+       <div>Edad:</div>
+        <div>{{age}}</div>
         <div>Correo electronico:</div>
-        <div>{{ userInformation.email }}</div>
+        <div>{{email}}</div>
       </div>
-      <div
+      <div 
         class="botonActualizarInfo"
         [routerLink]="['/inicio/perfil/actualizarinfo']"
       >

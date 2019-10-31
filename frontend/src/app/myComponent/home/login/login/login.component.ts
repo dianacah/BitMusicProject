@@ -1,3 +1,4 @@
+import { AppPage } from './../../../../../../e2e/src/app.po';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ConsultaPerfilService } from "./../../../../servicios/consulta-perfil/consulta-perfil.service";
@@ -12,7 +13,11 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  userLoginInformation: any = [];
+  userLoginInformation: any = {};
+  private name;
+  private age;
+  private email;
+  private password;
 
 
   constructor(
@@ -30,11 +35,16 @@ export class LoginComponent implements OnInit {
   obtener(datosIngreso) {
     this.consultaPerfilService.getPerfilInformation(datosIngreso.value.emailLog).subscribe(response => {
         this.userLoginInformation = response;
-        // this.router.navigate(['/inicio/perfil/informacion']);
-        console.log(this.userLoginInformation);
-        // this.storeService.setUser(this.userLoginInformation)
+        this.name = this.userLoginInformation.name
+        this.age = this.userLoginInformation.age 
+        this.email = this.userLoginInformation.email
+        this.password = this.userLoginInformation.password
+        this.storeService.setUser(this.name, this.age, this.email, this.password)
+         this.router.navigate(['/inicio/perfil/informacion']);
+         console.log(this.userLoginInformation);
       });
   }
+  
   ngOnInit() {
   }
 
