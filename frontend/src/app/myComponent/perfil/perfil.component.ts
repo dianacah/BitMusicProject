@@ -3,7 +3,6 @@ import { Component, OnInit } from "@angular/core";
 import { ViewEncapsulation } from "@angular/core";
 import { StoreService } from "./../../servicios/store/store.service";
 
-
 @Component({
   selector: "app-perfil",
   templateUrl: "./perfil.component.html",
@@ -18,7 +17,7 @@ export class PerfilComponent implements OnInit {
 
   constructor(
     private storeService: StoreService
-    ) {}
+  ) {}
 
   ngOnInit() {
     const user = this.storeService.getUser()

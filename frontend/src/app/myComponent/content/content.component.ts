@@ -1,27 +1,37 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, EventEmitter } from "@angular/core";
+import { TraerCancionesService } from "./../../servicios/traer-canciones/traer-canciones.service";
+import { ViewEncapsulation } from "@angular/core";
+import { StoreSongsService } from "./../../servicios/store-songs/store-songs.service";
 
 @Component({
   selector: "content",
   templateUrl: "./content.component.html",
-  styleUrls: ["./content.component.css"]
+  styleUrls: ["./content.component.css"],
+  encapsulation: ViewEncapsulation.None
 })
 export class ContentComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private traerCancionesService: TraerCancionesService,
+    private storeSongsService: StoreSongsService
+  ) {}
+  listaCanciones: any = [];
 
+  obtenerCanciones() {
+    this.traerCancionesService.getCanciones().subscribe(response => {
+      this.listaCanciones = response;
+      console.log(this.listaCanciones);
+    });
+  }
+  reproducir(rutaCancion) {
+    console.log(rutaCancion.file);
+    let servicio = this.storeSongsService.setSong(rutaCancion.file);
+    console.log(servicio);
+    /* let rutaCancionReproducir = new EventEmitter<string>(); */
+  }
   ngOnInit() {
-    let main = <HTMLElement>document.body.querySelector(".main");
-    let ruta = <HTMLElement>document.body.querySelector("source");
-    let reproductor = <HTMLElement>document.body.querySelector("audio");
-    let rutas = [
-      "../../../assets/audio/Bryant Myers - Gan-Ga (Letra).mp3",
-      "../../../assets/audio/Got To Keep On.mp3",
-      "../../../assets/audio/Alton Ellis Im Still In Love With You Girl.mp3",
-      "../../../assets/audio/Daft Punk - Technologic (Official audio).mp3",
-      "../../../assets/audio/Capital Cities - Safe and Sound (lyrics).mp3"
-    ];
-    let songName = <HTMLElement>document.body.querySelector("#songName");
+    this.obtenerCanciones();
 
-   /*  main.addEventListener("click", e => {
+    /*  main.addEventListener("click", e => {
       ruta.setAttribute("src", rutas[parseInt(e.target.id)]);
       reproductor.setAttribute("autoplay", "true");
       reproductor.load();
@@ -29,6 +39,6 @@ export class ContentComponent implements OnInit {
         22,
         rutas[parseInt(e.target.id)].length
       );
-    }) */;
+    }) */
   }
 }
