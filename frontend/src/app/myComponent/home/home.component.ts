@@ -44,7 +44,6 @@ export class HomeComponent implements OnInit {
     this.consultaPerfilService
       .getPerfilInformation(datosIngreso.value.emailLog)
       .subscribe(response => {
-        // this.userInformation = response;
         this.userLoginInformation = response;
         console.log(this.userLoginInformation);
       });
