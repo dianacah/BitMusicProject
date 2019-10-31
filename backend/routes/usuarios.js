@@ -37,10 +37,22 @@ usuariosRoute.get("/usuarios/:email", (req, res, next) => {
 
 //PUT
 
-usuariosRoute.put("/usuarios/:name", (req, res, next) => {
-  Usuarios.findOneAndUpdate({ name: req.params.name }, req.body)
+//usuariosRoute.put("/usuarios/:name", (req, res, next) => {
+//Usuarios.findOneAndUpdate({ name: req.params.name }, req.body)
+// .then(() => {
+      //const usuarios = Usuarios.findOne({ name: req.params.name });
+      //return usuarios;
+    //})
+    //.then(usuarios => {
+    // res.send(`Actualización exitosa ${usuarios}`);
+    //})
+    //.catch(next);
+//});
+
+usuariosRoute.put("/usuarios/:email", (req, res, next) => {
+  Usuarios.findOneAndUpdate({ email: req.params.email }, req.body)
     .then(() => {
-      const usuarios = Usuarios.findOne({ name: req.params.name });
+      const usuarios = Usuarios.findOne({ email: req.params.email });
       return usuarios;
     })
     .then(usuarios => {
