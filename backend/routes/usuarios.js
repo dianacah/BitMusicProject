@@ -7,24 +7,32 @@ const Usuarios = require("../modelos/usuarios");
 //POST
 usuariosRoute.post("/usuarios", (req, res, next) => {
   Usuarios.create(req.body)
-    .then(Usuarios => {
-      res.send(Usuarios);
-    })
-    .catch(next);
-});
+        .then(Usuarios => {
+          res.send(Usuarios);
+        })
+        .catch(next);
+    });
 
 //GET
 
 usuariosRoute.get("/usuarios/:email", (req, res, next) => {
-  Usuarios.findOne({ email: req.params.name }, req.body)
-    .then(() => {
-      const usuarios = Usuarios.findOne({ email: req.params.email });
-      return usuarios;
-    })
-    .then(usuarios => {
-      res.status(200).send(usuarios);
-    })
-    .catch(next);
+  Usuarios.findOne({ email: req.params.email }, (err, usuarioExistente) => {
+    if(usuarioExistente !== null){
+      Usuarios.findOne({ email: req.params.email }, req.body)
+        .then(() => {
+          const usuarios = Usuarios.findOne({ email: req.params.email });
+          return usuarios;
+        })
+        .then(usuarios => {
+          res.status(200).send(usuarios);
+        })
+        .catch(next);
+
+    } else {
+      res.json(null);
+
+    }
+  })
 });
 
 //PUT
