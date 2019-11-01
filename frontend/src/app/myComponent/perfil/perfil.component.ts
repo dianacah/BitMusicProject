@@ -15,16 +15,13 @@ export class PerfilComponent implements OnInit {
   public email;
   public age;
 
-  constructor(
-    private storeService: StoreService
-  ) {}
+  constructor(private storeService: StoreService) {}
 
   ngOnInit() {
-    const user = this.storeService.getUser()
+    const user = this.storeService.getUser();
     this.name = user.name;
     this.age = user.age;
     this.email = user.email;
     //estas variables son las que se pintan en el html
-    console.log("usuario",user);
   }
 }
