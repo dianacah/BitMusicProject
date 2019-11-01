@@ -32,7 +32,9 @@
     type="submit"
     routerLink="/inicio/contenido"
     (click)="obtener(ingresoForm)"
+    [disabled] = "ingresoForm.invalid"
   >
     Iniciar sesión
   </button>
+  <p *ngIf="wrongPass">Ups, los datos que ingresaste no son correctos, por favor verifica tu usuario y contraseña</p>
 </form>
