@@ -27,7 +27,6 @@
   text-align: center;
 }
 .navImagen {
-  background-color: #bbb1be;
   background-image: url(../../../assets/img/home.jpg);
   background-size: cover;
   display: flex;
@@ -36,12 +35,3 @@
   flex-direction: column;
   height: 200px;
 }
-/* .navImagen {
-  background-color: #bbb1be;
-} */
-/* .song {
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
-  color: white;
-  text-align: center;
-} */

@@ -1,6 +1,6 @@
 /* MAQUETADO GENERAL */
 
-#page {
+.page {
   display: grid;
   width: 100%;
   height: 100%;
@@ -9,7 +9,7 @@
   /* "head  main" */
   /* "head foot" ; */
   grid-template-rows: 0.1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.3fr 1fr;
   background-color: #343a40;
 }
 
