@@ -24,7 +24,5 @@ export class PerfilComponent implements OnInit {
     this.name = user.name;
     this.age = user.age;
     this.email = user.email;
-    //estas variables son las que se pintan en el html
-    console.log("usuario",user);
   }
 }

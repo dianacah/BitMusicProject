@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { FormularioRegistroService } from "./../../../../servicios/formulario-registro/formulario-registro.service";
 import { StoreService } from "./../../../../servicios/store/store.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-registro',
@@ -10,10 +11,13 @@ import { StoreService } from "./../../../../servicios/store/store.service";
 })
 export class RegistroComponent implements OnInit {
 
+  registerInformation: any = {};
+
   constructor(
     private builder: FormBuilder,
     private formularioRegistroService: FormularioRegistroService,
-    private storeService: StoreService
+    private storeService: StoreService,
+    private router: Router,
     ) { }
 
   registerForm: FormGroup = this.builder.group({
@@ -27,9 +31,12 @@ export class RegistroComponent implements OnInit {
   });
 
   enviar(datosRegistro) {
-    this.formularioRegistroService.postPerfilInformation(datosRegistro.value).subscribe(response => {
+    this.formularioRegistroService.postPerfilInformation(datosRegistro.value).subscribe((response={}) => {
       // llamar el servicio de storeService para almacenar los datos y luego pintarlos en el perfil
-        console.log(response);
+      this.registerInformation = response;
+      const {name, age, email, password} = this.registerInformation
+      const validarServicio=this.storeService.setUser(name, age, email, password)
+      this.router.navigate(["/inicio/perfil/informacion"]);
       });
   }
 

@@ -3,14 +3,14 @@
         <img src="../../../assets/img/FotoPerfil.PNG" alt="" class="imagenPerfil imagenActualizardatos" />
         <form [formGroup]="actualizarDatosForm" (ngSubmit)="enviar(registerForm.value)">
             <label>Nombre:</label>
-            <input formControlName="name" type="text" />
+            <input formControlName="name" type="text" value={{name}}/>
             <small class="error" *ngIf="
           actualizarDatosForm.get('email').hasError('required') &&
           actualizarDatosForm.get('email').touched
         ">Este espacio es requerido</small>
             <br />
             <label>Edad:</label>
-            <input formControlName="age" type="text" />
+            <input formControlName="age" type="text" value={{age}}/>
             <small class="error" *ngIf="
           actualizarDatosForm.get('email').hasError('required') &&
           actualizarDatosForm.get('email').touched
@@ -19,14 +19,14 @@
             <label>
                 Contraseña:
             </label>
-            <input formControlName="password" type="password" />
+            <input formControlName="password" type="password" value={{password}}/>
             <small class="error" *ngIf="
           actualizarDatosForm.get('email').hasError('required') &&
           actualizarDatosForm.get('email').touched
         ">Este espacio es requerido</small>
             <br />
             <label>Correo electronico:</label>
-            <input formControlName="email" type="email" />
+            <input formControlName="email" type="email" value={{email}}/>
             <small class="error" *ngIf="
           actualizarDatosForm.get('email').hasError('required') &&
           actualizarDatosForm.get('email').touched

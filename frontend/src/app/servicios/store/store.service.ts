@@ -16,6 +16,7 @@ export class StoreService {
       email,
       password
     }
+    return this.user
   }
 
   public getUser() {

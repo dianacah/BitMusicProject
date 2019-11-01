@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { StoreService } from "./../../servicios/store/store.service";
+import { UpdateInfoService } from "./../../servicios/update-info.service";
 
 @Component({
   selector: "app-actualizar-perfil",
@@ -7,7 +9,13 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
   styleUrls: ["./actualizar-perfil.component.css"]
 })
 export class ActualizarPerfilComponent implements OnInit {
-  constructor(private builder: FormBuilder) {}
+
+  public name;
+  public email;
+  public age;
+
+  constructor(private builder: FormBuilder, private storeService: StoreService, private updateInfoService: UpdateInfoService
+    ) {}
 
   actualizarDatosForm: FormGroup = this.builder.group({
     name: ["", Validators.required],
@@ -19,5 +27,14 @@ export class ActualizarPerfilComponent implements OnInit {
     password: ["", Validators.required]
   });
 
-  ngOnInit() {}
+  actualizarInfo(){
+
+  }
+
+  ngOnInit() {
+    const user = this.storeService.getUser()
+    this.name = user.name;
+    this.age = user.age;
+    this.email = user.email;
+  }
 }

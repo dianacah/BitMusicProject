@@ -13,10 +13,6 @@ import { V4MAPPED } from 'dns';
 })
 export class LoginComponent implements OnInit {
   userLoginInformation: any = {};
-  private name;
-  private age;
-  private email;
-  private password;
 
   constructor(
     private builder: FormBuilder,
@@ -33,18 +29,10 @@ export class LoginComponent implements OnInit {
   obtener(datosIngreso) {
     this.consultaPerfilService
       .getPerfilInformation(datosIngreso.value.emailLog)
-      .subscribe(response => {
+      .subscribe((response = {}) => {
         this.userLoginInformation = response;
-        this.name = this.userLoginInformation.name;
-        this.age = this.userLoginInformation.age;
-        this.email = this.userLoginInformation.email;
-        this.password = this.userLoginInformation.password;
-        this.storeService.setUser(
-          this.name,
-          this.age,
-          this.email,
-          this.password
-        );
+        const {name, age, email, password} = this.userLoginInformation
+        this.storeService.setUser(name, age, email, password);
         if(response == null){
           console.log("Este usuario no existe");
         }else {
