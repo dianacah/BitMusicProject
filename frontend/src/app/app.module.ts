@@ -20,11 +20,8 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { ActualizarPerfilComponent } from "./myComponent/actualizar-perfil/actualizar-perfil.component";
 import { RegistroComponent } from "./myComponent/home/registro/registro/registro.component";
 import { LoginComponent } from "./myComponent/home/login/login/login.component";
-<<<<<<< HEAD
 import { MatListModule } from "@angular/material/list";
-=======
 import { ModificarCancionesComponent } from "./myComponent/modificar-canciones/modificar-canciones.component";
->>>>>>> 1f393575465cd0d624c295d580b99c2a1b12f74a
 
 const routes: Routes = [
   {

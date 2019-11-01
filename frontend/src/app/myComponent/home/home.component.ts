@@ -9,7 +9,6 @@ import { ViewEncapsulation } from "@angular/core";
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit {
-
   constructor() {}
 
   ngOnInit() {}

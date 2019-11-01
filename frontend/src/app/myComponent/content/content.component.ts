@@ -14,8 +14,8 @@ import { StoreSongsService } from "./../../servicios/store-songs/store-songs.ser
 @Component({
   selector: "content",
   templateUrl: "./content.component.html",
-  styleUrls: ["./content.component.css"],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ["./content.component.css"]
+  // encapsulation: ViewEncapsulation.None
 })
 export class ContentComponent implements OnInit {
   audio = document.querySelector("audio");

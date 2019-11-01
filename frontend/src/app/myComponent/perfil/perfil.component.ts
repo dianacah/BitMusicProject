@@ -6,8 +6,8 @@ import { StoreService } from "./../../servicios/store/store.service";
 @Component({
   selector: "app-perfil",
   templateUrl: "./perfil.component.html",
-  styleUrls: ["./perfil.component.css"],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ["./perfil.component.css"]
+  // encapsulation: ViewEncapsulation.None
 })
 export class PerfilComponent implements OnInit {
   userInformation: any = [];

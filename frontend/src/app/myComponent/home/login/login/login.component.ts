@@ -49,8 +49,9 @@ export class LoginComponent implements OnInit {
           this.password,
           this.role
         );
-        if (response == null) {
-          // console.log("Este usuario no existe");
+        if (this.password != datosIngreso.value.passwordLog) {
+          console.log("La contraseña es incorrecta");
+          this.router.navigate(["/home"]);
         } else {
           this.router.navigate(["/inicio/perfil/informacion"]);
           // console.log(this.userLoginInformation);
