@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ConsultaPerfilService } from "./../../../../servicios/consulta-perfil/consulta-perfil.service";
 import { StoreService } from "./../../../../servicios/store/store.service";
 import { Router } from "@angular/router";
-import { V4MAPPED } from 'dns';
+import { V4MAPPED } from "dns";
 
 @Component({
   selector: "app-login",
@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   private age;
   private email;
   private password;
+  private role;
 
   constructor(
     private builder: FormBuilder,
@@ -34,23 +35,25 @@ export class LoginComponent implements OnInit {
     this.consultaPerfilService
       .getPerfilInformation(datosIngreso.value.emailLog)
       .subscribe(response => {
+        console.log(response);
         this.userLoginInformation = response;
         this.name = this.userLoginInformation.name;
         this.age = this.userLoginInformation.age;
         this.email = this.userLoginInformation.email;
         this.password = this.userLoginInformation.password;
+        this.role = this.userLoginInformation.role;
         this.storeService.setUser(
           this.name,
           this.age,
           this.email,
-          this.password
+          this.password,
+          this.role
         );
-        if(response == null){
-          console.log("Este usuario no existe");
-        }else {
+        if (response == null) {
+          // console.log("Este usuario no existe");
+        } else {
           this.router.navigate(["/inicio/perfil/informacion"]);
-          console.log(this.userLoginInformation);
-
+          // console.log(this.userLoginInformation);
         }
       });
   }

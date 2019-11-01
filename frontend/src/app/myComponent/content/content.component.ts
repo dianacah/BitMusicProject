@@ -28,13 +28,13 @@ export class ContentComponent implements OnInit {
   obtenerCanciones() {
     this.traerCancionesService.getCanciones().subscribe(response => {
       this.listaCanciones = response;
-      console.log(this.listaCanciones);
+      // console.log(this.listaCanciones);
     });
   }
   reproducir(rutaCancion) {
     const ruta = document.querySelector("source");
     const audio = document.querySelector("audio");
-    console.log(rutaCancion.file);
+    // console.log(rutaCancion.file);
     ruta.setAttribute("src", rutaCancion.file);
     audio.load();
     /* let servicio = this.storeSongsService.setSong(rutaCancion.file);
