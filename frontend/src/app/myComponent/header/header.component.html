@@ -33,7 +33,11 @@
         <a [routerLink]="['/inicio/perfil/informacion']">Perfil</a>
       </li>
       <div class="botonAg">
-        <button class="botonAgregar" *ngIf="admin">
+        <button
+          class="botonAgregar"
+          *ngIf="admin"
+          [routerLink]="['/inicio/administrarCanciones']"
+        >
           Agregar música
         </button>
       </div>
