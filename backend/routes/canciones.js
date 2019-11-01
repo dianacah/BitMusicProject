@@ -67,14 +67,15 @@ cancionesRoute.get("/canciones", (req, res, next) => {
 
 //PUT por title - ok
 
-cancionesRoute.put("/canciones/:title", (req, res, next) => {
-  Canciones.findOneAndUpdate({ title: req.params.title }, req.body)
+cancionesRoute.put("/canciones/:id", (req, res, next) => {
+  console.log("peticion", req, res);
+  Canciones.findOneAndUpdate(req.params, req.body)
     .then(() => {
-      const canciones = Canciones.findOne({ title: req.params.title });
+      const canciones = Canciones.findOneAndUpdate(req.params._id, req.body);
       return canciones;
     })
     .then(canciones => {
-      res.send(`Actualización exitosa ${canciones}`);
+      res.send(canciones);
     })
     .catch(next);
 });

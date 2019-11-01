@@ -1,4 +1,11 @@
-<form [formGroup]="actualizarCancionForm">
+<form [formGroup]="actualizarCancionForm" class="formularioActuCancion">
   <label>Nombre Cancion:</label>
-  <input formControlName="titulo" type="text" />
+  <input formControlName="title" type="text" [value]="tituloCancion" />
+  <label>Genero:</label>
+  <input formControlName="genre" type="text" [value]="genre" />
+  <label>Artista:</label>
+  <input formControlName="artist" type="text" [value]="artista" />
+  <label>Album:</label>
+  <input formControlName="album" type="text" [value]="album" />
+  <button (click)="close()">Guardar</button>
 </form>

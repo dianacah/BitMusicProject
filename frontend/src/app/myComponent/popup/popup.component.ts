@@ -9,6 +9,9 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 })
 export class PopupComponent implements OnInit {
   public tituloCancion: string;
+  public album: string;
+  public genre: string;
+  public artista: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -17,15 +20,21 @@ export class PopupComponent implements OnInit {
 
     @Inject(MAT_DIALOG_DATA) data
   ) {
-    console.log("datos", data);
     this.tituloCancion = data.title;
-    console.log("title", this.tituloCancion);
+    this.album = data.album;
+    this.genre = data.genre;
+    this.artista = data.artist;
   }
 
   actualizarCancionForm: FormGroup = this.builder.group({
-    titulo: [this.tituloCancion, Validators.compose([Validators.required])],
-    genre: ["", Validators.required]
+    title: ["", Validators.compose([Validators.required])],
+    genre: ["", Validators.required],
+    artist: ["", Validators.required],
+    album: ["", Validators.required]
   });
 
+  close() {
+    this.dialogRef.close(this.actualizarCancionForm);
+  }
   ngOnInit() {}
 }

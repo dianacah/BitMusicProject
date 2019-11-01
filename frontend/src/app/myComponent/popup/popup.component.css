@@ -1,0 +1,8 @@
+.formularioActuCancion {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8 1fr);
+  gap: 3%;
+  padding: 3%;
+  font-family: "Roboto", sans-serif;
+}

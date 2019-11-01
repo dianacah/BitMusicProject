@@ -12,7 +12,11 @@ export class TraerCancionesService {
     return this.http.get(this.url);
   }
   borrarCanciones(idCAncion) {
-    console.log(this.url + idCAncion);
     return this.http.delete(this.url + idCAncion);
+  }
+  actualizarCanciondb(cancion, datos) {
+    console.log("cancion", cancion, datos);
+    console.log("url", this.url + cancion);
+    return this.http.put(this.url + cancion, datos);
   }
 }

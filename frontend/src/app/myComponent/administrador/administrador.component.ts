@@ -15,10 +15,11 @@ export class AdministradorComponent implements OnInit {
   ) {}
 
   listaCanciones: any = [];
+  public popup;
   obtenerCanciones() {
     this.traerCancionesService.getCanciones().subscribe(response => {
       this.listaCanciones = response;
-      // console.log(this.listaCanciones);
+      console.log(this.listaCanciones);
     });
   }
 
@@ -37,14 +38,28 @@ export class AdministradorComponent implements OnInit {
 
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
+    dialogConfig.width = "400px";
+    dialogConfig.height = "400px";
     dialogConfig.data = {
       title: cancion.title,
       album: cancion.album,
       genre: cancion.genre,
       artist: cancion.artist
     };
-    console.log("datos", dialogConfig.data);
-    this.dialog.open(PopupComponent, dialogConfig);
+
+    this.popup = this.dialog.open(PopupComponent, dialogConfig);
+    this.popup.afterClosed().subscribe(response => {
+      let respuesta = response.value;
+      this.actualizarCancion(cancion._id, respuesta);
+    });
+  }
+  actualizarCancion(cancion, datosActualizados) {
+    this.traerCancionesService
+      .actualizarCanciondb(cancion, datosActualizados)
+      .subscribe(response => {
+        //console.log(response);
+        this.ngOnInit();
+      });
   }
 
   ngOnInit() {
