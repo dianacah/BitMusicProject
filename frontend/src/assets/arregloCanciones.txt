@@ -1,0 +1,88 @@
+
+[{
+        "title" : "Gan-Ga",
+        "album" : "Gan-Ga",
+        "duration" : "3:22",
+        "genre" : "Pop",
+        "artist" : "Bryant Myers",
+        "file" : "../../../assets/audio/canciones/bryant_myers_gan_ga.mp3",
+    "image":"../../../assets/img/img-canciones/imagencancion1.jpg"
+},
+{       
+        "title" : "Got to Keep On",
+        "album" : "No Geography",
+        "duration" : "3:07",
+        "genre" : "Pop",
+        "artist" : "The Chemical brothers",
+        "file" : "../../../assets/audio/canciones/the_chemical_brothers_got_to_keep_on.mp3",
+    "image":"../../../assets/img/img-canciones/imagencancion2.jpg"
+
+},
+{
+
+        "title" : "I'm Still In Love",
+        "album" : "Sing Rock and Soul",
+        "duration" : "3:25",
+        "genre" : "Pop",
+        "artist" : "Alton Ellis",
+        "file" : "../../../assets/audio/canciones/alton_ellis_im_still_in_love_with_you_girl.mp3",
+    "image":"../../../assets/img/img-canciones/imagencancion3.jpg"
+},
+{
+        "title" : "Technologic",
+        "album" : "Human After All",
+        "duration" : "2:56",
+        "genre" : "Rock",
+        "artist" : "Daft punk",
+        "file" : "../../../assets/audio/canciones/daft_punk_technologic.mp3",
+    "image":"../../../assets/img/img-canciones/imagencancion4.jpg"
+},
+{
+
+        "title" : "Safe And Sound",
+        "album" : "Capital Cities",
+        "duration" : "3:46",
+        "genre" : "Pop",
+        "artist" : "Burgundy Skies",
+        "file" : "../../../assets/audio/canciones/capital_cities_safe_and_sound.mp3",
+    "image":"../../../assets/img/img-canciones/imagencancion5.jpg"
+},
+{
+        "title" : "I Don't Care",
+        "album" : "Collaboration Project",
+        "duration" : "3:43",
+        "genre" : "Pop",
+        "artist" : "Justin Bieber",
+        "file" : "../../../assets/audio/canciones/ed_sheeran_justin_bieber_i_dont_care.mp3",
+    "image":"../../../assets/img/img-canciones/imagencancion6.jpg"
+},
+{
+        "title" : "Don't Call Me Angel",
+        "album" : "Charlie's Angels",
+        "duration" : "3:53",
+        "genre" : "Pop",
+        "artist" : "Ariana Grande",
+        "file" : "../../../assets/audio/canciones/ariana_grande_miley_cyrus_lana_del_rey_dont_call_me_angel.mp3",
+    "image":"../../../assets/img/img-canciones/imagencancion7.jpg"
+},
+{
+        "title" : "Señorita",
+        "album" : "Deluxe",
+        "duration" : "3:25",
+        "genre" : "Pop",
+        "artist" : "Shawn Mendes",
+        "file" : "../../../assets/audio/canciones/shawn_mendes_camila_cabello_senorita.mp3",
+    "image":"../../../assets/img/img-canciones/imagencancion8.jpg"
+},
+
+{
+        "title" : "How Do You Sleep",
+        "album" : "How Do You Sleep",
+        "duration" : "3:49",
+        "genre" : "Pop",
+        "artist" : "Sam Smith",
+        "file" : "../../../assets/audio/canciones/sam_smith_how_do_you_sleep.mp3",
+    "image":"../../../assets/img/img-canciones/imagencancion9.jpg"
+}
+]
+

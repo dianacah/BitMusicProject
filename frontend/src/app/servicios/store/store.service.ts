@@ -1,27 +1,25 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class StoreService {
+  private user: any = {};
 
-  private user: any = {}
+  constructor() {}
 
-  constructor() { }
-
-  public setUser(name, age, email, password) {
+  public setUser(name, age, email, password, role) {
     this.user = {
       name,
       age,
       email,
-      password
-    }
-    return this.user
+      password,
+      role
+    };
+    console.log("usuario guardado", this.user);
   }
 
   public getUser() {
     return this.user;
   }
-
-
 }

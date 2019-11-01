@@ -8,13 +8,12 @@ const usuariosSchema = new Schema({
   name: {
     type: String,
     required: true
-    
   },
   age: {
     type: Number,
     required: false
   },
-  
+
   email: {
     type: String,
     required: true
@@ -31,13 +30,11 @@ const usuariosSchema = new Schema({
   },
 
   role: {
-    type: String
+    type: String,
+    default: "normal"
   }
-  
 });
 
 const Usuarios = mongoose.model("usuarios", usuariosSchema);
 
 module.exports = Usuarios;
-
-

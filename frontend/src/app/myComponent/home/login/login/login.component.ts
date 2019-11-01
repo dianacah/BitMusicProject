@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ConsultaPerfilService } from "./../../../../servicios/consulta-perfil/consulta-perfil.service";
 import { StoreService } from "./../../../../servicios/store/store.service";
 import { Router } from "@angular/router";
-import { V4MAPPED } from 'dns';
+import { V4MAPPED } from "dns";
 
 @Component({
   selector: "app-login",
@@ -31,14 +31,13 @@ export class LoginComponent implements OnInit {
       .getPerfilInformation(datosIngreso.value.emailLog)
       .subscribe((response = {}) => {
         this.userLoginInformation = response;
-        const {name, age, email, password} = this.userLoginInformation
-        this.storeService.setUser(name, age, email, password);
+        const {name, age, email, password, rol} = this.userLoginInformation
+        this.storeService.setUser(name, age, email, password, rol);
         if(response == null){
           console.log("Este usuario no existe");
         }else {
           this.router.navigate(["/inicio/perfil/informacion"]);
-          console.log(this.userLoginInformation);
-
+          // console.log(this.userLoginInformation);
         }
       });
   }

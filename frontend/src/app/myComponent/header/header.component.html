@@ -1,27 +1,47 @@
 <!-- HEADER -->
 <header>
-    <div class="headerP">
-        <div class="logo">
-            <img src="../../../assets/img/logo.png" height="100%" width="100%" alt="" />
-        </div>
-        <div class="divinfoPerfil">
-            <img src="../../../assets/img/FotoPerfil.PNG" class="infoPerfil" />
-        </div>
-
-        <div class="menu">
-            <li class="home" (click)="mostrarHome()">
-                <img src="../../../assets/img/home-iconsubir.png" height="40px" width="40px" alt="" />
-                <a [routerLink]="['/inicio/contenido']">Home</a>
-
-            </li>
-            <li class="home">
-                <img src="../../../assets/img/home-iconsubir.png" height="40px" width="40px" alt="" />
-                <a [routerLink]="['/inicio/perfil/informacion']">Perfil</a>
-            </li>
-            <div class="botonAg">
-                <button class="botonAgregar">Agregar música</button>
-            </div>
-            <a routerLink="/home">Cerrar Sesion</a>
-        </div>
+  <div class="headerP">
+    <div class="logo">
+      <img
+        src="../../../assets/img/logo.png"
+        height="100%"
+        width="100%"
+        alt=""
+      />
     </div>
+    <div class="divinfoPerfil">
+      <img src="../../../assets/img/FotoPerfil.PNG" class="infoPerfil" />
+    </div>
+
+    <div class="menu">
+      <li class="home" (click)="mostrarHome()">
+        <img
+          src="../../../assets/img/home-iconsubir.png"
+          height="40px"
+          width="40px"
+          alt=""
+        />
+        <a [routerLink]="['/inicio/contenido']">Home</a>
+      </li>
+      <li class="home">
+        <img
+          src="../../../assets/img/home-iconsubir.png"
+          height="40px"
+          width="40px"
+          alt=""
+        />
+        <a [routerLink]="['/inicio/perfil/informacion']">Perfil</a>
+      </li>
+      <div class="botonAg">
+        <button
+          class="botonAgregar"
+          *ngIf="admin"
+          [routerLink]="['/inicio/administrarCanciones']"
+        >
+          Agregar música
+        </button>
+      </div>
+      <a routerLink="/home">Cerrar Sesion</a>
+    </div>
+  </div>
 </header>

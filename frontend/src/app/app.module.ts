@@ -20,8 +20,8 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { ActualizarPerfilComponent } from "./myComponent/actualizar-perfil/actualizar-perfil.component";
 import { RegistroComponent } from "./myComponent/home/registro/registro/registro.component";
 import { LoginComponent } from "./myComponent/home/login/login/login.component";
-
-
+import { MatListModule } from "@angular/material/list";
+import { ModificarCancionesComponent } from "./myComponent/modificar-canciones/modificar-canciones.component";
 
 const routes: Routes = [
   {
@@ -53,7 +53,8 @@ const routes: Routes = [
       {
         path: "contenido",
         component: ContentComponent
-      }
+      },
+      { path: "administrarCanciones", component: ModificarCancionesComponent }
     ]
   },
   {
@@ -85,7 +86,8 @@ const routes: Routes = [
     InicioComponent,
     ActualizarPerfilComponent,
     RegistroComponent,
-    LoginComponent
+    LoginComponent,
+    ModificarCancionesComponent
   ],
   imports: [
     BrowserModule,
@@ -93,7 +95,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
