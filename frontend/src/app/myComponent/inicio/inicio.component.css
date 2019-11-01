@@ -8,7 +8,7 @@
     "head nav"
     "head  main"
     "head foot";
-  grid-template-rows: 1fr 4fr 0.5fr;
+  grid-template-rows: 100px 1fr 0.5fr;
   grid-template-columns: auto 1fr;
   background-color: #343a40;
 }
@@ -22,7 +22,7 @@
 
 .navegador {
   grid-area: nav;
-  height: 100%;
+  height: 100px;
 }
 
 .contenido {

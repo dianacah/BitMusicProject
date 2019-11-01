@@ -11,4 +11,8 @@ export class TraerCancionesService {
   getCanciones() {
     return this.http.get(this.url);
   }
+  borrarCanciones(idCAncion) {
+    console.log(this.url + idCAncion);
+    return this.http.delete(this.url + idCAncion);
+  }
 }

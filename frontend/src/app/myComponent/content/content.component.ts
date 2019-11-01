@@ -8,14 +8,13 @@ import {
   ElementRef
 } from "@angular/core";
 import { TraerCancionesService } from "./../../servicios/traer-canciones/traer-canciones.service";
-import { ViewEncapsulation } from "@angular/core";
+
 import { StoreSongsService } from "./../../servicios/store-songs/store-songs.service";
 
 @Component({
   selector: "content",
   templateUrl: "./content.component.html",
   styleUrls: ["./content.component.css"]
-  // encapsulation: ViewEncapsulation.None
 })
 export class ContentComponent implements OnInit {
   audio = document.querySelector("audio");

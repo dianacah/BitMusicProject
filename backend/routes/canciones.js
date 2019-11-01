@@ -85,7 +85,7 @@ cancionesRoute.put("/canciones/:title", (req, res, next) => {
 
 cancionesRoute.delete("/canciones/:id", (req, res, next) => {
   Canciones.findOneAndDelete({ _id: req.params.id }).then(canciones => {
-    res.send("Borrado exitoso " + canciones);
+    res.send(canciones);
   }).catch.next;
 });
 

@@ -1,9 +1,10 @@
-import { AdministradorComponent } from './myComponent/administrador/administrador.component';
+import { AdministradorComponent } from "./myComponent/administrador/administrador.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { MatBottomSheetModule } from "@angular/material/bottom-sheet";
 
 import { AppComponent } from "./app.component";
 import { SliderComponent } from "./myComponent/slider/slider.component";
@@ -23,8 +24,9 @@ import { RegistroComponent } from "./myComponent/home/registro/registro/registro
 import { LoginComponent } from "./myComponent/home/login/login/login.component";
 import { MatListModule } from "@angular/material/list";
 import { ModificarCancionesComponent } from "./myComponent/modificar-canciones/modificar-canciones.component";
-import {MatIconModule} from '@angular/material/icon';
-
+import { MatIconModule } from "@angular/material/icon";
+import { MatDialogModule } from "@angular/material";
+import { PopupComponent } from "./myComponent/popup/popup.component";
 
 const routes: Routes = [
   {
@@ -91,7 +93,8 @@ const routes: Routes = [
     RegistroComponent,
     LoginComponent,
     ModificarCancionesComponent,
-    AdministradorComponent
+    AdministradorComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
@@ -101,9 +104,12 @@ const routes: Routes = [
     MatTabsModule,
     HttpClientModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatBottomSheetModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PopupComponent]
 })
 export class AppModule {}

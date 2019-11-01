@@ -1,11 +1,11 @@
 <div class="admin">
-    <mat-list>
-        <div class="cancion" *ngFor = "let cancion of listaCanciones">
-            <mat-list-item>{{cancion.title}}</mat-list-item>
-            <button>Actualizar</button>
-            <button>Borrar</button>
-            <br>
-        <mat-divider></mat-divider>
-        </div>
-    </mat-list>
+  <mat-list>
+    <div class="cancion" *ngFor="let cancion of listaCanciones">
+      <mat-list-item>{{ cancion.title }}</mat-list-item>
+      <button (click)="openDialog(cancion)">Actualizar</button>
+      <button (click)="borrarCanciones(cancion)">Borrar</button>
+      <br />
+      <mat-divider></mat-divider>
+    </div>
+  </mat-list>
 </div>
