@@ -1,13 +1,11 @@
 import { ConsultaPerfilService } from "./../../servicios/consulta-perfil/consulta-perfil.service";
 import { Component, OnInit } from "@angular/core";
-
 import { StoreService } from "./../../servicios/store/store.service";
 
 @Component({
   selector: "app-perfil",
   templateUrl: "./perfil.component.html",
   styleUrls: ["./perfil.component.css"]
-
 })
 export class PerfilComponent implements OnInit {
   userInformation: any = [];

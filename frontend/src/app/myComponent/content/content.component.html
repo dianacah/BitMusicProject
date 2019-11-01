@@ -1,23 +1,25 @@
-<audio controls [autoplay]="true">
-  <source src="" type="audio/mp3" />
-</audio>
+<div class="parteSuperior">
+    <audio class="barraReproductor" controls [autoplay]="true">
+    <source src="" type="audio/mp3" />
+  </audio>
+    <div class="buscador">
+        <input type="text" class="buscarTexto" placeholder="Search..">
+        <button type="submit" class="buscar">buscar</button>
+    </div>
+</div>
 <main class="main">
-  <div class="title">
-    <h1 class="sectionTitle">
-      Top List
-    </h1>
-    <hr />
-  </div>
-  <div
-    class="cancion"
-    *ngFor="let cancion of listaCanciones"
-    (click)="reproducir(cancion)"
-  >
-    <img [src]="cancion.image" alt="" class="imgCancion" id="0" />
-    <h1 class="nombre">{{ cancion.title }}</h1>
-    <p class="artista">{{ cancion.artist }}</p>
-  </div>
-  <!-- <div class="cancion">
+    <div class="title">
+        <h1 class="sectionTitle">
+            Top List
+        </h1>
+        <hr />
+    </div>
+    <div class="cancion" *ngFor="let cancion of listaCanciones" (click)="reproducir(cancion)">
+        <img [src]="cancion.image" alt="" class="imgCancion" id="0" />
+        <h1 class="nombre">{{ cancion.title }}</h1>
+        <p class="artista">{{ cancion.artist }}</p>
+    </div>
+    <!-- <div class="cancion">
     <img
       src="../../../assets/img/imagencancion2.jpg"
       alt=""
@@ -57,57 +59,57 @@
     <h1 class="nombre">Safe and Sound</h1>
     <p class="artista">Burgundy Skies</p>
   </div> -->
-  <div class="tituloFavs sectionTitle">
-    <h1 class="sectionTitle">Tus Favoritos</h1>
-    <hr />
-  </div>
-  <div class="fav1">
-    <img src="../../../assets/img/favImagen.jpg" alt="" class="imgFav" />
-    <h1 class="nombre">I Don't Care</h1>
-    <div class="favWrapper">
-      <p class="artista">Justin Bieber</p>
-      <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
+    <div class="tituloFavs sectionTitle">
+        <h1 class="sectionTitle">Tus Favoritos</h1>
+        <hr />
     </div>
-  </div>
-  <div class="fav2">
-    <img src="../../../assets/img/favImagen2.jpg" alt="" class="imgFav" />
-    <h1 class="nombre">Don't Call Me Angel</h1>
-    <div class="favWrapper">
-      <p class="artista">Ariana Grande</p>
-      <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
+    <div class="fav1">
+        <img src="../../../assets/img/favImagen.jpg" alt="" class="imgFav" />
+        <h1 class="nombre">I Don't Care</h1>
+        <div class="favWrapper">
+            <p class="artista">Justin Bieber</p>
+            <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
+        </div>
     </div>
-  </div>
-  <div class="fav3">
-    <img src="../../../assets/img/favImagen3.jpg" alt="" class="imgFav" />
-    <h1 class="nombre">Señorita</h1>
-    <div class="favWrapper">
-      <p class="artista">Shawn Mendes</p>
-      <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
+    <div class="fav2">
+        <img src="../../../assets/img/favImagen2.jpg" alt="" class="imgFav" />
+        <h1 class="nombre">Don't Call Me Angel</h1>
+        <div class="favWrapper">
+            <p class="artista">Ariana Grande</p>
+            <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
+        </div>
     </div>
-  </div>
-  <div class="fav4">
-    <img src="../../../assets/img/favImagen4.jpg" alt="" class="imgFav" />
-    <h1 class="nombre">How Do You Sleep?</h1>
-    <div class="favWrapper">
-      <p class="artista">Sam Smith</p>
-      <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
+    <div class="fav3">
+        <img src="../../../assets/img/favImagen3.jpg" alt="" class="imgFav" />
+        <h1 class="nombre">Señorita</h1>
+        <div class="favWrapper">
+            <p class="artista">Shawn Mendes</p>
+            <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
+        </div>
     </div>
-  </div>
-  <div class="tituloPublicidad">
-    <h1>Próximos Eventos</h1>
-  </div>
-  <div class="aside1">
-    <p class="nombreEvento">Beyond Wonderland</p>
-    <button class="miBoton">COMPRAR</button>
-  </div>
-  <div class="aside2">
-    <div class="infoEvento2">
-      <p class="nombreEvento pequeño">Interpol & Franz Ferdinard</p>
+    <div class="fav4">
+        <img src="../../../assets/img/favImagen4.jpg" alt="" class="imgFav" />
+        <h1 class="nombre">How Do You Sleep?</h1>
+        <div class="favWrapper">
+            <p class="artista">Sam Smith</p>
+            <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
+        </div>
     </div>
-  </div>
-  <div class="aside3">
-    <div class="infoEvento3">
-      <p class="nombreEvento pequeño">4 Latidos: Camila en Concierto</p>
+    <div class="tituloPublicidad">
+        <h1>Próximos Eventos</h1>
     </div>
-  </div>
+    <div class="aside1">
+        <p class="nombreEvento">Beyond Wonderland</p>
+        <button class="miBoton">COMPRAR</button>
+    </div>
+    <div class="aside2">
+        <div class="infoEvento2">
+            <p class="nombreEvento pequeño">Interpol & Franz Ferdinard</p>
+        </div>
+    </div>
+    <div class="aside3">
+        <div class="infoEvento3">
+            <p class="nombreEvento pequeño">4 Latidos: Camila en Concierto</p>
+        </div>
+    </div>
 </main>

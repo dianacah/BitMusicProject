@@ -15,7 +15,7 @@ mat-tab-group {
   border-radius: 1%;
 }
 .tabGroup {
-  width: 35vw;
+  width: 450px;
   height: 85vh;
   /* background-color:rgba(0,0,0, 0.1); */
   background-color: rgba(255, 255, 255, 1);
@@ -27,6 +27,8 @@ input {
   width: 80%;
   margin: 0 0 5px 0;
   font-family: "Roboto", sans-serif;
+  color: gray;
+  font-size:15px;
 }
 mat-tab {
   display: flex;
@@ -50,6 +52,10 @@ button {
     rgba(252, 176, 69, 1) 100%
   );
   font-weight: 100;
+  margin-top:10%;
+}
+button:disabled {
+  background: lightgray;
 }
 .homeForm {
   display: flex;
