@@ -32,8 +32,8 @@ export class LoginComponent implements OnInit {
       .subscribe((response = {}) => {
         console.log(response);
         this.userLoginInformation = response;
-        const {name, age, email, password, rol} = this.userLoginInformation
-        this.storeService.setUser(name, age, email, password, rol);
+        const {name, age, email, password, role} = this.userLoginInformation
+        this.storeService.setUser(name, age, email, password, role);
         if (this.userLoginInformation.password != datosIngreso.value.passwordLog) {
           console.log("La contraseña es incorrecta");
           this.router.navigate(["/home"]);

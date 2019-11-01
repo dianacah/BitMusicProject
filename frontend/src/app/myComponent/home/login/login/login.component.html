@@ -32,6 +32,7 @@
     type="submit"
     routerLink="/inicio/contenido"
     (click)="obtener(ingresoForm)"
+    [disabled] = "ingresoForm.invalid"
   >
     Iniciar sesión
   </button>

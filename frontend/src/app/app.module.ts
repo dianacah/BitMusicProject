@@ -1,3 +1,4 @@
+import { AdministradorComponent } from './myComponent/administrador/administrador.component';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
@@ -22,6 +23,8 @@ import { RegistroComponent } from "./myComponent/home/registro/registro/registro
 import { LoginComponent } from "./myComponent/home/login/login/login.component";
 import { MatListModule } from "@angular/material/list";
 import { ModificarCancionesComponent } from "./myComponent/modificar-canciones/modificar-canciones.component";
+import {MatIconModule} from '@angular/material/icon';
+
 
 const routes: Routes = [
   {
@@ -54,7 +57,7 @@ const routes: Routes = [
         path: "contenido",
         component: ContentComponent
       },
-      { path: "administrarCanciones", component: ModificarCancionesComponent }
+      { path: "administrarCanciones", component: AdministradorComponent }
     ]
   },
   {
@@ -87,7 +90,8 @@ const routes: Routes = [
     ActualizarPerfilComponent,
     RegistroComponent,
     LoginComponent,
-    ModificarCancionesComponent
+    ModificarCancionesComponent,
+    AdministradorComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +100,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatTabsModule,
     HttpClientModule,
-    MatListModule
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,12 +17,15 @@ export class HeaderComponent implements OnInit {
     setTimeout(() => {
       let user = this.storeService.getUser();
       this.role = user.role;
+      console.log(this.role);
       if (this.role === "admin") {
+        
         this.admin = true;
+        console.log(this.admin);
       }
       //estas variables son las que se pintan en el html
       console.log("role", user);
-    }, 1000);
+    }, 2000);
   }
 
   mostrarHome() {}
