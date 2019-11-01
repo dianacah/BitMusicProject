@@ -20,8 +20,7 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { ActualizarPerfilComponent } from "./myComponent/actualizar-perfil/actualizar-perfil.component";
 import { RegistroComponent } from "./myComponent/home/registro/registro/registro.component";
 import { LoginComponent } from "./myComponent/home/login/login/login.component";
-
-
+import { MatListModule } from "@angular/material/list";
 
 const routes: Routes = [
   {
@@ -93,7 +92,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
