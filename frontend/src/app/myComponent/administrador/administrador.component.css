@@ -1,0 +1,29 @@
+
+    button{
+        
+            font-family: "Roboto", sans-serif;
+            border: none;
+            border-radius: 5rem;
+            /* height: 45px;
+            width: 50%; */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            background: rgb(131, 58, 180);
+            background: linear-gradient( 90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 218, 1) 50%, rgba(252, 176, 69, 1) 100% );
+            font-weight: 100;
+        
+    }
+    .cancion{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+    .admin{
+        width: 100vw;
+        height: 500vh;
+        display: flex;
+        background: wheat;
+        justify-content: center;
+        align-content: center;
+    }
