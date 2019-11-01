@@ -21,9 +21,11 @@ export class LoginComponent implements OnInit {
     private storeService: StoreService
   ) {}
 
+  wrongPass = false;
+
   ingresoForm: FormGroup = this.builder.group({
     emailLog: ["", Validators.compose([Validators.required, Validators.email])],
-    passwordLog: ["", Validators.required]
+    passwordLog: ["", Validators.required],
   });
 
   obtener(datosIngreso) {
@@ -32,14 +34,15 @@ export class LoginComponent implements OnInit {
       .subscribe((response = {}) => {
         console.log(response);
         this.userLoginInformation = response;
-        const {name, age, email, password, role} = this.userLoginInformation
+        const { name, age, email, password, role } = this.userLoginInformation;
         this.storeService.setUser(name, age, email, password, role);
-        if (this.userLoginInformation.password != datosIngreso.value.passwordLog) {
+        if (
+          this.userLoginInformation.password != datosIngreso.value.passwordLog
+        ) {
           console.log("La contraseña es incorrecta");
-          this.router.navigate(["/home"]);
-        }else {
+          let wrongPass = true;
+        } else {
           this.router.navigate(["/inicio/perfil/informacion"]);
-          // console.log(this.userLoginInformation);
         }
       });
   }
