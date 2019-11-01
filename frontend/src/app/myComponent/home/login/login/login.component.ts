@@ -30,11 +30,13 @@ export class LoginComponent implements OnInit {
     this.consultaPerfilService
       .getPerfilInformation(datosIngreso.value.emailLog)
       .subscribe((response = {}) => {
+        console.log(response);
         this.userLoginInformation = response;
         const {name, age, email, password, rol} = this.userLoginInformation
         this.storeService.setUser(name, age, email, password, rol);
-        if(response == null){
-          console.log("Este usuario no existe");
+        if (this.userLoginInformation.password != datosIngreso.value.passwordLog) {
+          console.log("La contraseña es incorrecta");
+          this.router.navigate(["/home"]);
         }else {
           this.router.navigate(["/inicio/perfil/informacion"]);
           // console.log(this.userLoginInformation);

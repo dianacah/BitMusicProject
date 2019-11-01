@@ -34,8 +34,8 @@ export class RegistroComponent implements OnInit {
     this.formularioRegistroService.postPerfilInformation(datosRegistro.value).subscribe((response={}) => {
       // llamar el servicio de storeService para almacenar los datos y luego pintarlos en el perfil
       this.registerInformation = response;
-      const {name, age, email, password} = this.registerInformation
-      const validarServicio=this.storeService.setUser(name, age, email, password)
+      const {name, age, email, password, role} = this.registerInformation
+      const validarServicio=this.storeService.setUser(name, age, email, password, role)
       this.router.navigate(["/inicio/perfil/informacion"]);
       });
   }
