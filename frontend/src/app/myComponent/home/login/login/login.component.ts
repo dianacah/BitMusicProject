@@ -21,14 +21,15 @@ export class LoginComponent implements OnInit {
     private storeService: StoreService
   ) {}
 
-  wrongPass = false;
+  // wrongPass = false;
 
   ingresoForm: FormGroup = this.builder.group({
     emailLog: ["", Validators.compose([Validators.required, Validators.email])],
-    passwordLog: ["", Validators.required],
+    passwordLog: ["", Validators.required]
   });
 
   obtener(datosIngreso) {
+    let wrongPass = false;
     this.consultaPerfilService
       .getPerfilInformation(datosIngreso.value.emailLog)
       .subscribe((response = {}) => {
@@ -40,9 +41,11 @@ export class LoginComponent implements OnInit {
           this.userLoginInformation.password != datosIngreso.value.passwordLog
         ) {
           console.log("La contraseña es incorrecta");
-          let wrongPass = true;
+          this.router.navigate(["/home"]);
+          console.log(wrongPass);
         } else {
-          this.router.navigate(["/inicio/perfil/informacion"]);
+          // this.router.navigate(["/inicio/perfil/informacion"]);
+          wrongPass = true;
         }
       });
   }
