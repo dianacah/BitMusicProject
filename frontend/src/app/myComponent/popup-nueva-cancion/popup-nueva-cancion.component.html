@@ -1,0 +1,21 @@
+<form [formGroup]="nuevaCancionForm" class="formularioAgregarCancion">
+  <h1>Ingresa los datos de la nueva cancion</h1>
+  <input formControlName="title" type="text" placeholder="Nombre cancion" />
+  <input formControlName="genre" type="text" placeholder="Genero" />
+  <input formControlName="artist" type="text" placeholder="Artista" />
+  <input formControlName="album" type="text" placeholder="Album" />
+  <input formControlName="duration" type="text" placeholder="Duración" />
+  <p>Selecciona el archivo de la cancion</p>
+  <input
+    formControlName="file"
+    type="file"
+    placeholder="Archivo de la Cancion"
+  />
+  <p>Selecciona la imagen de la cancion</p>
+  <input
+    formControlName="image"
+    type="file"
+    placeholder=" Imagen de la Cancion"
+  />
+  <button (click)="close()">Agregar Cancion</button>
+</form>

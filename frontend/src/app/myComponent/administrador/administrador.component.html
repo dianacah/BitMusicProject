@@ -1,9 +1,9 @@
 <div class="admin">
-  <button>Agregar cancion</button>
+  <button (click)="addSong()">Agregar cancion</button>
   <mat-list>
     <div class="cancion" *ngFor="let cancion of listaCanciones">
       <mat-list-item>{{ cancion.title }}</mat-list-item>
-      <button (click)="openDialog(cancion)">Actualizar</button>
+      <button (click)="actuzarSong(cancion)">Actualizar</button>
       <button (click)="borrarCanciones(cancion)">Borrar</button>
       <br />
       <mat-divider></mat-divider>
