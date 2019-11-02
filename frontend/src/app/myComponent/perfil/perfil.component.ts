@@ -37,21 +37,10 @@ export class PerfilComponent implements OnInit {
       image: "../../../assets/img/img-usuarios/" + nombreImagen
     };
     this.consultaPerfilService
-      .atualizarImagen(this.email, nuevaImagen)
+      .actualizarImagen(this.email, nuevaImagen)
       .subscribe(response => {
         console.log("la respuesta es:", response);
         this.respuesta = response;
-        /* this.storeService
-          .setUser(
-            respuesta.name,
-            respuesta.age,
-            respuesta.email,
-            respuesta.password,
-            respuesta.role,
-            respuesta.image
-          ).subscribe(() => {
-            this.ngOnInit();
-          }); */
         this.storeService.setUser(
           this.respuesta.name,
           this.respuesta.age,
@@ -60,6 +49,7 @@ export class PerfilComponent implements OnInit {
           this.respuesta.role,
           this.respuesta.image
         );
+        localStorage.setItem("image", this.respuesta.image);
         this.ngOnInit();
       });
   }

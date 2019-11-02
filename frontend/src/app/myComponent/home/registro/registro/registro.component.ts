@@ -43,6 +43,10 @@ export class RegistroComponent implements OnInit {
           role,
           image
         } = this.registerInformation;
+        let imagenLocal = localStorage.setItem(
+          "image",
+          this.registerInformation.image
+        );
         const validarServicio = this.storeService.setUser(
           name,
           age,

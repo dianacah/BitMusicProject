@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   userInformation: any = [];
   public role;
   public admin = false;
+  public imagen;
 
   constructor(private storeService: StoreService) {}
 
@@ -17,9 +18,10 @@ export class HeaderComponent implements OnInit {
     setTimeout(() => {
       let user = this.storeService.getUser();
       this.role = user.role;
+      this.imagen = localStorage.getItem("image");
+      console.log(this.imagen);
       console.log(this.role);
       if (this.role === "admin") {
-        
         this.admin = true;
         console.log(this.admin);
       }

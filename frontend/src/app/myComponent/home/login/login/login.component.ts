@@ -42,6 +42,10 @@ export class LoginComponent implements OnInit {
           role,
           image
         } = this.userLoginInformation;
+        let imagenLocal = localStorage.setItem(
+          "image",
+          this.userLoginInformation.image
+        );
         this.storeService.setUser(name, age, email, password, role, image);
         if (
           this.userLoginInformation.password != datosIngreso.value.passwordLog
