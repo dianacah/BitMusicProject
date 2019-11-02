@@ -1,85 +1,96 @@
 .wrapper {
-    overflow: hidden;
-  }
-  .body {
-    background-image: url(../../../../../assets/img/portada.jpg);
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  mat-tab-group {
-    border-radius: 1% !important;
-  }
-  .tabGroup {
-    width: 400px;
-    height: 85vh;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  input {
-    border-radius: 5rem;
-    border: 1px solid lightgray;
-    padding: 15px;
-    width: 80%;
-    margin: 0 0 5px 0;
-    font-family: "Roboto", sans-serif;
-    color: gray;
-    font-size:15px;
-  }
-  mat-tab {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-  }
-  button {
-    font-family: "Roboto", sans-serif;
-    border: none;
-    border-radius: 5rem;
-    height: 45px;
-    width: 50%;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    background: rgb(131, 58, 180);
-    background: linear-gradient(
-      90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(253, 29, 218, 1) 50%,
-      rgba(252, 176, 69, 1) 100%
-    );
-    font-weight: 100;
-    margin-top:10%;
-  }
-  button:disabled {
-      background: lightgray;
-  }
-  .homeForm {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    margin-top: 5%;
-    max-width:100%;
-  }
-  .title {
-    margin-bottom: 4%;
-    color: lightgray;
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-size: 40px;
-    align-self: left;
-  }
-  .mat-tab-label .mat-tab-label-content {
-    font-family: "Roboto", sans-serif !important;
-    color: gray !important;
-    font-size: 18px !important;
-    font-weight: 100 !important;
-  }
-  .mat-tab-group.mat-primary .mat-ink-bar,
-  .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background-color: rgba(253, 29, 218, 1) !important;
-  }
-  
+  overflow: hidden;
+}
+.body {
+  background-image: url(../../../../../assets/img/portada.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+mat-tab-group {
+  border-radius: 1% !important;
+}
+.tabGroup {
+  width: 400px;
+  height: 85vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+input {
+  border-radius: 5rem;
+  border: 1px solid lightgray;
+  padding: 15px;
+  width: 80%;
+  margin: 0 0 5px 0;
+  font-family: "Roboto", sans-serif;
+  color: gray;
+  font-size: 15px;
+}
+mat-tab {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+button {
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 5rem;
+  height: 45px;
+  width: 50%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 218, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  font-weight: 100;
+  margin-top: 10%;
+}
+button:disabled {
+  background: lightgray;
+}
+.homeForm {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 5%;
+  max-width: 100%;
+}
+.title {
+  margin-bottom: 4%;
+  color: lightgray;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  align-self: left;
+}
+:host ::ng-deep .mat-tab-label .mat-tab-label-content {
+  font-family: "Roboto", sans-serif !important;
+  color: gray !important;
+  font-size: 18px !important;
+  font-weight: 100 !important;
+}
+:host ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #c70d3a !important;
+}
+small {
+  color: gray;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+.errMsg {
+  color: gray;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  padding: 20px 30px;
+  font-weight: 100;
+}

@@ -1,0 +1,7 @@
+.formularioAgregarCancion {
+  display: flex;
+  flex-direction: column;
+}
+.formularioAgregarCancion > input {
+  margin: 1%;
+}

@@ -13,6 +13,7 @@ import { V4MAPPED } from "dns";
 })
 export class LoginComponent implements OnInit {
   userLoginInformation: any = {};
+  public wrongPass = true;
 
   constructor(
     private builder: FormBuilder,
@@ -21,15 +22,13 @@ export class LoginComponent implements OnInit {
     private storeService: StoreService
   ) {}
 
-  // wrongPass = false;
-
-  ingresoForm: FormGroup = this.builder.group({
+ ingresoForm: FormGroup = this.builder.group({
     emailLog: ["", Validators.compose([Validators.required, Validators.email])],
     passwordLog: ["", Validators.required]
   });
 
   obtener(datosIngreso) {
-    let wrongPass = false;
+    
     this.consultaPerfilService
       .getPerfilInformation(datosIngreso.value.emailLog)
       .subscribe((response = {}) => {
@@ -40,12 +39,10 @@ export class LoginComponent implements OnInit {
         if (
           this.userLoginInformation.password != datosIngreso.value.passwordLog
         ) {
-          console.log("La contraseña es incorrecta");
-          this.router.navigate(["/home"]);
-          console.log(wrongPass);
+          this.router.navigate([""]);
+          this.wrongPass = false;
         } else {
-          // this.router.navigate(["/inicio/perfil/informacion"]);
-          wrongPass = true;
+          this.router.navigate(["/inicio/contenido"]);
         }
       });
   }
