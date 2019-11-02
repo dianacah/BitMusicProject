@@ -22,20 +22,27 @@ export class LoginComponent implements OnInit {
     private storeService: StoreService
   ) {}
 
- ingresoForm: FormGroup = this.builder.group({
+  ingresoForm: FormGroup = this.builder.group({
     emailLog: ["", Validators.compose([Validators.required, Validators.email])],
     passwordLog: ["", Validators.required]
   });
 
   obtener(datosIngreso) {
-    
     this.consultaPerfilService
       .getPerfilInformation(datosIngreso.value.emailLog)
       .subscribe((response = {}) => {
         console.log(response);
+
         this.userLoginInformation = response;
-        const { name, age, email, password, role } = this.userLoginInformation;
-        this.storeService.setUser(name, age, email, password, role);
+        const {
+          name,
+          age,
+          email,
+          password,
+          role,
+          image
+        } = this.userLoginInformation;
+        this.storeService.setUser(name, age, email, password, role, image);
         if (
           this.userLoginInformation.password != datosIngreso.value.passwordLog
         ) {

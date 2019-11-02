@@ -1,16 +1,23 @@
 <div class="infoPerfil">
   <div class="divmostrar">
-    <img src="../../../assets/img/FotoPerfil.PNG" alt="" class="imagenPerfil" />
+    <div class="divimagen">
+      <img [src]="user.image" alt="" class="imagenPerfil" />
+      <p>Cambiar imagen de perfil</p>
+      <form [formGroup]="cambioFotoForm">
+        <input type="file" formControlName="image" />
+        <button (click)="cambiarImagen()">Cambiar imagen</button>
+      </form>
+    </div>
     <div class="seccionMostarInfo">
       <div class="contenedorInfo">
         <div>Nombre:</div>
-         <div>{{name}}</div>
-       <div>Edad:</div>
-        <div>{{age}}</div>
+        <div>{{ name }}</div>
+        <div>Edad:</div>
+        <div>{{ age }}</div>
         <div>Correo electronico:</div>
-        <div>{{email}}</div>
+        <div>{{ email }}</div>
       </div>
-      <div 
+      <div
         class="botonActualizarInfo"
         [routerLink]="['/inicio/perfil/actualizarinfo']"
       >

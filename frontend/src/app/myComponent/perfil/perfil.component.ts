@@ -1,3 +1,4 @@
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ConsultaPerfilService } from "./../../servicios/consulta-perfil/consulta-perfil.service";
 import { Component, OnInit } from "@angular/core";
 import { StoreService } from "./../../servicios/store/store.service";
@@ -12,14 +13,62 @@ export class PerfilComponent implements OnInit {
   public name;
   public email;
   public age;
+  public user;
+  public src;
+  public respuesta;
+  constructor(
+    private storeService: StoreService,
+    private formBuilder: FormBuilder,
+    private builder: FormBuilder,
+    private consultaPerfilService: ConsultaPerfilService
+  ) {}
 
-  constructor(private storeService: StoreService) {}
+  cambioFotoForm: FormGroup = this.builder.group({
+    image: ["", Validators.required]
+  });
 
+  cambiarImagen() {
+    let pathImagen: "../../../assets/img/img-usuarios/";
+    let nombreImagen = this.cambioFotoForm.value.image.substr(
+      12,
+      this.cambioFotoForm.value.image.length
+    );
+    let nuevaImagen = {
+      image: "../../../assets/img/img-usuarios/" + nombreImagen
+    };
+    this.consultaPerfilService
+      .atualizarImagen(this.email, nuevaImagen)
+      .subscribe(response => {
+        console.log("la respuesta es:", response);
+        this.respuesta = response;
+        /* this.storeService
+          .setUser(
+            respuesta.name,
+            respuesta.age,
+            respuesta.email,
+            respuesta.password,
+            respuesta.role,
+            respuesta.image
+          ).subscribe(() => {
+            this.ngOnInit();
+          }); */
+        this.storeService.setUser(
+          this.respuesta.name,
+          this.respuesta.age,
+          this.respuesta.email,
+          this.respuesta.password,
+          this.respuesta.role,
+          this.respuesta.image
+        );
+        this.ngOnInit();
+      });
+  }
   ngOnInit() {
-    const user = this.storeService.getUser();
-    this.name = user.name;
-    this.age = user.age;
-    this.email = user.email;
+    this.user = this.storeService.getUser();
+    this.name = this.user.name;
+    this.age = this.user.age;
+    this.email = this.user.email;
+    this.src = this.user.image;
     //estas variables son las que se pintan en el html
   }
 }

@@ -48,11 +48,13 @@
   box-shadow: 2px 7px 24px 0px black;
   font-family: "Roboto", sans-serif;
 }
+
 .imagenPerfil {
-  width: 35%;
-  height: 45%;
+  width: 300px;
+  height: 300px;
   border-radius: 10%;
   box-shadow: 2px 7px 24px 0px #f33c4d;
+  margin: 5px;
 }
 .botonActualizarInfo {
   width: 100px;
@@ -163,4 +165,28 @@ small {
 .datosBit {
   color: white;
   font-family: "Open Sans", sans-serif;
+}
+.divimagen {
+  width: 40%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.divimagen > input {
+  border-radius: 1%;
+  border: none;
+  padding: 3px;
+  width: 40%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  box-shadow: 2px 6px 26px black;
+}
+.divimagen > p {
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
 }
