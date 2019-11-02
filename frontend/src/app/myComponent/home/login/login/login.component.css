@@ -72,15 +72,15 @@ button:disabled {
   font-size: 40px;
   align-self: left;
 }
-.mat-tab-label .mat-tab-label-content {
+:host ::ng-deep .mat-tab-label .mat-tab-label-content {
   font-family: "Roboto", sans-serif !important;
   color: gray !important;
   font-size: 18px !important;
   font-weight: 100 !important;
 }
-.mat-tab-group.mat-primary .mat-ink-bar,
+:host ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
 .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-  background-color: rgba(253, 29, 218, 1) !important;
+  background-color: #c70d3a !important;
 }
 small {
   color: gray;
