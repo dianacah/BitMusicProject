@@ -1,12 +1,19 @@
 <div class="admin">
-  <button (click)="addSong()">Agregar cancion</button>
-  <mat-list>
-    <div class="cancion" *ngFor="let cancion of listaCanciones">
-      <mat-list-item>{{ cancion.title }}</mat-list-item>
-      <button (click)="actuzarSong(cancion)">Actualizar</button>
-      <button (click)="borrarCanciones(cancion)">Borrar</button>
-      <br />
-      <mat-divider></mat-divider>
-    </div>
-  </mat-list>
+<button (click)="addSong()" class="addSongs">Agregar canción</button>
+  <table mat-table>
+    <tr>
+      <th></th>
+      <th>Nombre</th>
+      <th>Artista</th>
+      <th>Género</th>
+    </tr>
+    <tr *ngFor="let cancion of listaCanciones">
+      <td><mat-icon>music_note</mat-icon></td>
+      <td>{{ cancion.title }}</td>
+      <td>{{ cancion.artist }}</td>
+      <td>{{ cancion.genre }}</td>
+      <td><button (click)="actuzarSong(cancion)">Actualizar</button></td>
+      <td><button (click)="borrarCanciones(cancion)">Borrar</button></td>
+    </tr>
+  </table>
 </div>

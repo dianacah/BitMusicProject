@@ -5,6 +5,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { MatBottomSheetModule } from "@angular/material/bottom-sheet";
+import { MatAutocompleteModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 
 import { AppComponent } from "./app.component";
 import { SliderComponent } from "./myComponent/slider/slider.component";
@@ -27,6 +28,8 @@ import { ModificarCancionesComponent } from "./myComponent/modificar-canciones/m
 import { MatIconModule } from "@angular/material/icon";
 import { MatDialogModule } from "@angular/material";
 import { PopupComponent } from "./myComponent/popup/popup.component";
+import {MatSortModule} from '@angular/material/sort';
+
 
 const routes: Routes = [
   {
@@ -106,10 +109,14 @@ const routes: Routes = [
     MatListModule,
     MatIconModule,
     MatBottomSheetModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSortModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [PopupComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -12,13 +12,12 @@
   align-items: center;
 }
 mat-tab-group {
-  border-radius: 1%;
+  border-radius: 1% !important;
 }
 .tabGroup {
-  width: 450px;
-  height: 85vh;
-  /* background-color:rgba(0,0,0, 0.1); */
-  background-color: rgba(255, 255, 255, 1);
+  width: 450px !important;
+  height: 85vh !important;
+  background-color: rgba(255, 255, 255, 1) !important;
 }
 input {
   border-radius: 5rem;
@@ -31,9 +30,9 @@ input {
   font-size:15px;
 }
 mat-tab {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
 }
 button {
   font-family: "Roboto", sans-serif;
@@ -73,13 +72,13 @@ button:disabled {
   font-size: 40px;
   align-self: left;
 }
-.mat-tab-label .mat-tab-label-content {
-  font-family: "Roboto", sans-serif;
-  color: gray;
-  font-size: 18px;
-  font-weight: 100;
+:host ::ng-deep .mat-tab-label .mat-tab-label-content {
+  font-family: "Roboto", sans-serif !important;
+  color: gray !important;
+  font-size: 16px !important;
+  font-weight: 100 !important;
 }
-.mat-tab-group.mat-primary .mat-ink-bar,
+:host ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
 .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-  background-color: rgba(253, 29, 218, 1);
+  background-color: #c70d3a !important;
 }
