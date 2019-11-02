@@ -13,4 +13,7 @@ export class ConsultaPerfilService {
   getPerfilInformation(emailLog) {
     return this.http.get(this.url + emailLog);
   }
+  actualizarImagen(email, nuevaImagen) {
+    return this.http.put(this.url + email, nuevaImagen);
+  }
 }

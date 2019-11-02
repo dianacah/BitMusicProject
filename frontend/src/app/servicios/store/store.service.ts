@@ -8,15 +8,18 @@ export class StoreService {
 
   constructor() {}
 
-  public setUser(name, age, email, password, role) {
+  public setUser(name, age, email, password, role, image) {
+    this.user.image = null;
     this.user = {
       name,
       age,
       email,
       password,
-      role
+      role,
+      image
     };
     console.log("usuario guardado", this.user);
+    /*  localStorage.setItem("usuario", JSON.parse(this.user)); */
   }
 
   public getUser() {

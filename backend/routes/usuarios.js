@@ -7,17 +7,17 @@ const Usuarios = require("../modelos/usuarios");
 //POST
 usuariosRoute.post("/usuarios", (req, res, next) => {
   Usuarios.create(req.body)
-        .then(Usuarios => {
-          res.send(Usuarios);
-        })
-        .catch(next);
-    });
+    .then(Usuarios => {
+      res.send(Usuarios);
+    })
+    .catch(next);
+});
 
 //GET
 
 usuariosRoute.get("/usuarios/:email", (req, res, next) => {
   Usuarios.findOne({ email: req.params.email }, (err, usuarioExistente) => {
-    if(usuarioExistente !== null){
+    if (usuarioExistente !== null) {
       Usuarios.findOne({ email: req.params.email }, req.body)
         .then(() => {
           const usuarios = Usuarios.findOne({ email: req.params.email });
@@ -27,12 +27,10 @@ usuariosRoute.get("/usuarios/:email", (req, res, next) => {
           res.status(200).send(usuarios);
         })
         .catch(next);
-
     } else {
       res.json(null);
-
     }
-  })
+  });
 });
 
 //PUT
@@ -40,13 +38,13 @@ usuariosRoute.get("/usuarios/:email", (req, res, next) => {
 //usuariosRoute.put("/usuarios/:name", (req, res, next) => {
 //Usuarios.findOneAndUpdate({ name: req.params.name }, req.body)
 // .then(() => {
-      //const usuarios = Usuarios.findOne({ name: req.params.name });
-      //return usuarios;
-    //})
-    //.then(usuarios => {
-    // res.send(`Actualización exitosa ${usuarios}`);
-    //})
-    //.catch(next);
+//const usuarios = Usuarios.findOne({ name: req.params.name });
+//return usuarios;
+//})
+//.then(usuarios => {
+// res.send(`Actualización exitosa ${usuarios}`);
+//})
+//.catch(next);
 //});
 
 usuariosRoute.put("/usuarios/:email", (req, res, next) => {
@@ -56,7 +54,7 @@ usuariosRoute.put("/usuarios/:email", (req, res, next) => {
       return usuarios;
     })
     .then(usuarios => {
-      res.send(`Actualización exitosa ${usuarios}`);
+      res.send(usuarios);
     })
     .catch(next);
 });

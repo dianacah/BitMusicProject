@@ -26,7 +26,8 @@ const usuariosSchema = new Schema({
 
   image: {
     type: String,
-    required: false
+    required: false,
+    default: "../../../assets/img/img-usuarios/Albert_Ortiz.jpg"
   },
 
   role: {
