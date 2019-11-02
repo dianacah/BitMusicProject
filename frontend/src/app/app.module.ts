@@ -27,6 +27,8 @@ import { ModificarCancionesComponent } from "./myComponent/modificar-canciones/m
 import { MatIconModule } from "@angular/material/icon";
 import { MatDialogModule } from "@angular/material";
 import { PopupComponent } from "./myComponent/popup/popup.component";
+import {MatSortModule} from '@angular/material/sort';
+
 
 const routes: Routes = [
   {
@@ -106,7 +108,8 @@ const routes: Routes = [
     MatListModule,
     MatIconModule,
     MatBottomSheetModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent],
