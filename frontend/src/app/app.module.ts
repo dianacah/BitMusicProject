@@ -110,7 +110,7 @@ const routes: Routes = [
     MatIconModule,
     MatBottomSheetModule,
     MatDialogModule,
-    MatSortModule
+    MatSortModule,
     MatAutocompleteModule,
     MatInputModule,
     MatFormFieldModule,
