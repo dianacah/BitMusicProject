@@ -190,29 +190,6 @@ hr {
   grid-column: 4/6;
 }
 
-.buscar {
-  border-radius: 8px 8px 8px 8px;
-  border: none;
-  background-color: #ad1799;
-  border-radius: 70px;
-  width: 100px;
-  height: 40px;
-  font-size: 15px;
-  justify-items: right;
-  margin-right: 100px;
-  color: white;
-  
-}
-
-.buscar:hover {
-  cursor: pointer;
-  box-shadow: 6px 7px 18px -3px #e0ad93;
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
-  transform: scale(1.05);
-}
 
 .buscarTexto {
   border-radius: 8px 8px 8px 8px;
