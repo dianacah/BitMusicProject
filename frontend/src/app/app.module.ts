@@ -5,6 +5,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { MatBottomSheetModule } from "@angular/material/bottom-sheet";
+import { MatAutocompleteModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 
 import { AppComponent } from "./app.component";
 import { SliderComponent } from "./myComponent/slider/slider.component";
@@ -110,9 +111,12 @@ const routes: Routes = [
     MatBottomSheetModule,
     MatDialogModule,
     MatSortModule
+    MatAutocompleteModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [PopupComponent]
 })
-export class AppModule {}
+export class AppModule { }

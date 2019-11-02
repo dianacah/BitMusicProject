@@ -83,6 +83,186 @@
         "artist" : "Sam Smith",
         "file" : "../../../assets/audio/canciones/sam_smith_how_do_you_sleep.mp3",
     "image":"../../../assets/img/img-canciones/imagencancion9.jpg"
+},
+{
+        "title" : "Fallin",
+        "album" : "Songs in A Minor",
+        "duration" : "3:28",
+        "genre" : "Pop",
+        "artist" : "Alicia Keys",
+        "file" : "../../../assets/audio/canciones/Alicia_Keys_Fallin.mp3",
+    "image" : "../../../assets/img/img-canciones/Alicia_Keys_Fallin.jpg"
+},
+{
+        "title" : "Antes de Morirme",
+        "album" : "Antes de Morirme",
+        "duration" : "3:30",
+        "genre" : "Pop",
+        "artist" : "Rosalia",
+        "file" : "../../../assets/audio/canciones/Antes_de_morirme_feat_Rosalia.mp3",
+    "image" : "../../../assets/img/img-canciones/Antes_de_morirme_feat_Rosalia.jpg"
+},
+{
+        "title" : "Saian supa crew",
+        "album" : "KLR",
+        "duration" : "5:17",
+        "genre" : "Hip-Hop",
+        "artist" : "Anyela",
+        "file" : "../../../assets/audio/canciones/Anyela-saian_supa_crew.mp3",
+    "image" : "../../../assets/img/img-canciones/Anyela-saian_supa_crew.jpg"
+},
+{
+        "title" : "Invencible",
+        "album" : "Sin Miedo",
+        "duration" : "6:07",
+        "genre" : "Pop",
+        "artist" : "ChocQuibtown",
+        "file" : "../../../assets/audio/canciones/ChocQuibTown-Invencible.mp3",
+    "image" : "../../../assets/img/img-canciones/ChocQuibTown-Invencible.jpg"
+},
+{
+        "title":"Te Enamoras",
+        "album":"Malamarismo",
+        "duration":"3:20",
+        "genre":"Pop",
+        "artist":"Mala Rodriguez",
+        "file":"../../../assets/audio/canciones/Dellafuente_y_Mala_Rodriguez-Tenamoras.mp3",
+    "image":"../../../assets/img/img-canciones/Dellafuente_y_Mala_Rodriguez-Tenamoras.jpg"
+},
+{
+        "title":"Falsaria",
+        "album":"Smile Its",
+        "duration":"6:02",
+        "genre":"Salsa",
+        "artist":"Gran Combo",
+        "file":"../../../assets/audio/canciones/Falsaria.mp3",
+    "image":"../../../assets/img/img-canciones/Falsaria.jpg"
+},
+{
+        "title":"Unforgettable",
+        "album":"Jungle Rules",
+        "duration":"4:47",
+        "genre":"Hip-Hop",
+        "artist":"French Montana",
+        "file":"../../../assets/audio/canciones/French_Montana_Unforgettable.mp3",
+    "image":"../../../assets/img/img-canciones/French_Montana_Unforgettable.jpg"
+},
+{
+        "title":"Take Me To Church",
+        "album":"Take Me To Church E.P.",
+        "duration":"4:03",
+        "genre":"Blues",
+        "artist":"Hozier",
+        "file":"../../../assets/audio/canciones/Hozier_take_me_to_church.mp3",
+    "image":"../../../assets/img/img-canciones/Hozier_take_me_to_church.jpg"
+},
+{
+        "title":"Fuego",
+        "album":"Mis planes son amarte",
+        "duration":"3:06",
+        "genre":"Pop",
+        "artist":"Juanes",
+        "file":"../../../assets/audio/canciones/Juanes-Fuego.mp3",
+    "image":"../../../assets/img/img-canciones/Juanes-Fuego.png"
+},
+{
+        "title":"Shallow start is born",
+        "album":"A Star Is Born",
+        "duration":"3:36",
+        "genre":"Pop",
+        "artist":"Lady Gaga",
+        "file":"../../../assets/audio/canciones/Lady_gaga_bradley_cooper_shallow.mp3",
+    "image":"../../../assets/img/img-canciones/Lady_gaga_bradley_cooper_shallow.jpg"
+},
+{
+        "title":"Million Reasons",
+        "album":"Joanne",
+        "duration":"3:22",
+        "genre":"Pop",
+        "artist":"Lady Gaga",
+        "file":"../../../assets/audio/canciones/Lady_gaga_million_reasons.mp3",
+    "image":"../../../assets/img/img-canciones/Lady_gaga_million_reasons.png"
+},
+{
+        "title":"Payaso",
+        "album":"Vinyl",
+        "duration":"4:40",
+        "genre":"Salsa",
+        "artist":"Andy Montañez",
+        "file":"../../../assets/audio/canciones/Payaso.mp3",
+    "image":"../../../assets/img/img-canciones/Payaso.jpg"
+},
+{
+        "title":"Repent",
+        "album":"Clothes Drop",
+        "duration":"3:45",
+        "genre":"Reggae",
+        "artist":"Shaggy",
+        "file":"../../../assets/audio/canciones/Repent-Shaggy.mp3",
+    "image":"../../../assets/img/img-canciones/Repent-Shaggy.jpg"
+},
+{
+        "title":"Stay",
+        "album":"Unapologetic",
+        "duration":"4:48",
+        "genre":"Pop",
+        "artist":"Rihanna",
+        "file":"../../../assets/audio/canciones/Rihanna_stay.mp3",
+    "image":"../../../assets/img/img-canciones/Rihanna_stay.jpg"
+},
+{
+        "title":"Di mi nombre",
+        "album":"El mal querer",
+        "duration":"3:01",
+        "genre":"Pop",
+        "artist":"Rosalia",
+        "file":"../../../assets/audio/canciones/Rosalia-Di_mi_nombre.mp3",
+    "image":"../../../assets/img/img-canciones/Rosalia-Di_mi_nombre.jpg"
+},
+{
+        "title":"Dios nos libre del Dinero",
+        "album":"El mal querer",
+        "duration":"4:48",
+        "genre":"Pop",
+        "artist":"Rosalia",
+        "file":"../../../assets/audio/canciones/Rosalia-Dios_nos_libre_del_dinero.mp3",
+    "image":"../../../assets/img/img-canciones/Rosalia-Dios_nos_libre_del_dinero.jpg"
+},
+{
+        "title":"Drinkee",
+        "album":"My Dance Music Selection",
+        "duration":"3:11",
+        "genre":"Electronica",
+        "artist":"Sofi Tukker",
+        "file":"../../../assets/audio/canciones/Sofi_Tukker-Drinkee.mp3",
+    "image":"../../../assets/img/img-canciones/Sofi_Tukker-Drinkee.jpg"
+},
+{
+        "title":"Ritmo",
+        "album":"Mi Gente",
+        "duration":"3:39",
+        "genre":"Reggaeton",
+        "artist":"Jbalvin",
+        "file":"../../../assets/audio/canciones/The_black_eyed_peas_jbalvin_ritmo.mp3",
+    "image":"../../../assets/img/img-canciones/The_black_eyed_peas_jbalvin_ritmo.jpg"
+},
+{
+        "title":"Mojada",
+        "album":"3980",
+        "duration":"6:12",
+        "genre":"Rock",
+        "artist":"Vilma Palma",
+        "file":"../../../assets/audio/canciones/Vilma_Palma_e_Vampiros-Mojada.mp3",
+    "image":"../../../assets/img/img-canciones/Vilma_Palma_e_Vampiros-Mojada.jpg"
+},
+{
+        "title":"Verano",
+        "album":"3980",
+        "duration":"6:58",
+        "genre":"Rock",
+        "artist":"Vilma Palma",
+        "file":"../../../assets/audio/canciones/Vilma_Palma_e_Vampiros-Verano_Traidor.mp3",
+    "image":"../../../assets/img/img-canciones/Vilma_Palma_e_Vampiros-Verano_Traidor.jpg"
 }
 ]
 
