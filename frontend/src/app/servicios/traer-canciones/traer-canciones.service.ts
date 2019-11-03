@@ -19,4 +19,7 @@ export class TraerCancionesService {
     console.log("url", this.url + cancion);
     return this.http.put(this.url + cancion, datos);
   }
+  addSong(cancion) {
+    return this.http.post(this.url, cancion);
+  }
 }

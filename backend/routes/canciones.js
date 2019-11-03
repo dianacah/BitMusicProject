@@ -8,7 +8,7 @@ const Canciones = require("../modelos/canciones");
 cancionesRoute.post("/canciones", (req, res, next) => {
   Canciones.create(req.body)
     .then(Canciones => {
-      res.send("Creado exitosamente " + Canciones);
+      res.send(Canciones);
     })
     .catch(next);
 });

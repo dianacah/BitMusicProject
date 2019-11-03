@@ -50,6 +50,8 @@ export class PerfilComponent implements OnInit {
           this.respuesta.image
         );
         localStorage.setItem("image", this.respuesta.image);
+        const imagenHeader = document.querySelector(".infoPerfil");
+        imagenHeader.setAttribute("src", nuevaImagen.image);
         this.ngOnInit();
       });
   }

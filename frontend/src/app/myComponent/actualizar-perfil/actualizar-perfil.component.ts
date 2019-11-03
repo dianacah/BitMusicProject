@@ -9,13 +9,16 @@ import { UpdateInfoService } from "./../../servicios/update-info.service";
   styleUrls: ["./actualizar-perfil.component.css"]
 })
 export class ActualizarPerfilComponent implements OnInit {
-
   public name;
   public email;
   public age;
+  public imagen;
 
-  constructor(private builder: FormBuilder, private storeService: StoreService, private updateInfoService: UpdateInfoService
-    ) {}
+  constructor(
+    private builder: FormBuilder,
+    private storeService: StoreService,
+    private updateInfoService: UpdateInfoService
+  ) {}
 
   actualizarDatosForm: FormGroup = this.builder.group({
     name: ["", Validators.required],
@@ -27,14 +30,13 @@ export class ActualizarPerfilComponent implements OnInit {
     password: ["", Validators.required]
   });
 
-  actualizarInfo(){
-
-  }
+  actualizarInfo() {}
 
   ngOnInit() {
-    const user = this.storeService.getUser()
+    const user = this.storeService.getUser();
     this.name = user.name;
     this.age = user.age;
     this.email = user.email;
+    this.imagen = localStorage.getItem("image");
   }
 }

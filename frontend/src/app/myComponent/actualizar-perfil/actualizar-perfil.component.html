@@ -1,6 +1,6 @@
 <div class="actualizarInfo">
     <div class="divFormularioActualizar">
-        <img src="../../../assets/img/FotoPerfil.PNG" alt="" class="imagenPerfil imagenActualizardatos" />
+        <img [src]="imagen" alt="" class="imagenPerfil imagenActualizardatos" />
         <form [formGroup]="actualizarDatosForm" (ngSubmit)="enviar(registerForm.value)">
             <label>Nombre:</label>
             <input formControlName="name" type="text" value={{name}}/>
