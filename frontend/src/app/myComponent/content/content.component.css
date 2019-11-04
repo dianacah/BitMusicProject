@@ -207,3 +207,19 @@ hr {
 .example-full-width {
   width: 100%;
 }
+
+.buscar{
+    border: none;
+    background-color: #610952;
+    border-radius: 70px;
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+    box-shadow: 6px 7px 18px -3px #ac0d96;
+    color:white;
+  }
+  .buscar:hover {
+    cursor: pointer;
+    box-shadow: 6px 7px 18px -3px #c51eb7;
+    transform: scale(1.05);
+  }

@@ -38,3 +38,21 @@
 :host ::ng-deep mat-icon {
     color:lightgray;
 }
+
+.botonActualizar{
+  background-color: rgb(68, 158, 68);
+  color: white;
+  height: 27px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.botonBorrar{
+  background-color: rgb(160, 14, 43);
+  color: white;
+  height: 27px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
