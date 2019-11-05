@@ -1,4 +1,4 @@
-.wrapper {
+* {
   overflow: hidden;
 }
 .body {
@@ -27,7 +27,7 @@ input {
   margin: 0 0 5px 0;
   font-family: "Roboto", sans-serif;
   color: gray;
-  font-size:15px;
+  font-size: 15px;
 }
 mat-tab {
   display: flex !important;
@@ -51,7 +51,7 @@ button {
     rgba(252, 176, 69, 1) 100%
   );
   font-weight: 100;
-  margin-top:10%;
+  margin-top: 10%;
 }
 button:disabled {
   background: lightgray;
@@ -62,7 +62,7 @@ button:disabled {
   justify-items: center;
   align-items: center;
   margin-top: 5%;
-  max-width:100%;
+  max-width: 100%;
 }
 .title {
   margin-bottom: 4%;

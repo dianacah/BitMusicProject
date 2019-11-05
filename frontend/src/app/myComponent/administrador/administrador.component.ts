@@ -2,7 +2,11 @@ import { FormBuilder } from "@angular/forms";
 import { PopupComponent } from "./../popup/popup.component";
 import { Component, OnInit } from "@angular/core";
 import { TraerCancionesService } from "./../../servicios/traer-canciones/traer-canciones.service";
-import { MatDialog, MatDialogConfig } from "@angular/material";
+import {
+  MatDialog,
+  MatDialogConfig,
+  MatTableDataSource
+} from "@angular/material";
 import { PopupNuevaCancionComponent } from "./../popup-nueva-cancion/popup-nueva-cancion.component";
 
 @Component({
