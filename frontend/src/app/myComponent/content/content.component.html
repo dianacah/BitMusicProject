@@ -1,44 +1,22 @@
 <div class="parteSuperior">
-  <audio class="barraReproductor" controls [autoplay]="true">
-    <source src="" type="audio/mp3" />
-  </audio>
-
-  <!--     <form class="example-form" [formGroup]="entradaBuscador">
-        <mat-form-field class="example-full-width">
-            <input type="text" matInput [formControl]="buscador" [matAutocomplete]="auto"
-                formControlName="entradaBusqueda">
-            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-                <mat-option *ngFor="let canciones of listaCanciones | async" [value]="buscar">
-                    {{cancion.title}}
-                </mat-option>
-            </mat-autocomplete>
-        </mat-form-field>
-    </form> -->
-
-  <div class="buscador">
-    <input type="text" class="buscarTexto" placeholder="Search.." />
-    <button type="submit" class="buscar">Buscar</button>
-  </div>
+    <audio class="barraReproductor" controls [autoplay]="true">
+        <source src="" type="audio/mp3" />
+    </audio>
 </div>
 <main class="main">
-  <div class="title">
-    <h1 class="sectionTitle">
-      Top List
-    </h1>
-    <hr />
-  </div>
-  <div
-    class="cancion"
-    *ngFor="let cancion of listaCanciones"
-    (click)="reproducir(cancion)"
-  >
-    <img [src]="cancion.image" alt="" class="imgCancion" id="0" />
-    <h1 class="nombre">{{ cancion.title }}</h1>
-    <p class="artista">{{ cancion.artist }}</p>
-    <img (click)="favoritos(cancion)" src="../../../assets/img/heart.png" />
-  </div>
+    <div class="title">
+        <h1 class="sectionTitle">
+            Top List
+        </h1>
+        <hr />
+    </div>
+    <div class="cancion" *ngFor="let cancion of listaCanciones" (click)="reproducir(cancion)">
+        <img [src]="cancion.image" alt="" class="imgCancion" id="0" />
+        <h1 class="nombre">{{ cancion.title }}</h1>
+        <p class="artista">{{ cancion.artist }}</p>
+    </div>
 
-  <!--  <div class="cancion">
+    <!--  <div class="cancion">
     <img
       src="../../../assets/img/imagencancion2.jpg"
       alt=""
@@ -78,37 +56,37 @@
     <h1 class="nombre">Safe and Sound</h1>
     <p class="artista">Burgundy Skies</p>
   </div> -->
-  -->
+    -->
 
-  <div class="tituloFavs sectionTitle">
-    <h1 class="sectionTitle">Tus Favoritos</h1>
-    <hr />
-  </div>
-  <div class="fav1" *ngFor="let cancionFavorita of listaCancionesFavoritas">
-    <img [src]="cancionFavorita.image" alt="" class="imgFav" />
-    <h1 class="nombre">{{ cancionFavorita.title }}</h1>
-    <div class="favWrapper">
-      <p class="artista">{{ cancionFavorita.artist }}</p>
-      <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
+    <div class="tituloFavs sectionTitle">
+        <h1 class="sectionTitle">Tus Favoritos</h1>
+        <hr />
     </div>
-  </div>
+    <div class="fav1" *ngFor="let cancionFavorita of listaCancionesFavoritas">
+        <img [src]="cancionFavorita.image" alt="" class="imgFav" />
+        <h1 class="nombre">{{ cancionFavorita.title }}</h1>
+        <div class="favWrapper">
+            <p class="artista">{{ cancionFavorita.artist }}</p>
+            <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
+        </div>
+    </div>
 
-  <div class="tituloPublicidad">
-    <h1>Próximos Eventos</h1>
-  </div>
-  <div class="aside1">
-    <p class="nombreEvento">Beyond Wonderland</p>
-    <button class="miBoton">COMPRAR</button>
-  </div>
-  <div class="aside2">
-    <div class="infoEvento2">
-      <p class="nombreEvento pequeño">Interpol & Franz Ferdinard</p>
+    <div class="tituloPublicidad">
+        <h1>Próximos Eventos</h1>
     </div>
-  </div>
-  <div class="aside3">
-    <div class="infoEvento3">
-      <p class="nombreEvento pequeño">4 Latidos: Camila en Concierto</p>
+    <div class="aside1">
+        <p class="nombreEvento">Beyond Wonderland</p>
+        <button class="miBoton">COMPRAR</button>
     </div>
-  </div>
-  <!-- </main> -->
+    <div class="aside2">
+        <div class="infoEvento2">
+            <p class="nombreEvento pequeño">Interpol & Franz Ferdinard</p>
+        </div>
+    </div>
+    <div class="aside3">
+        <div class="infoEvento3">
+            <p class="nombreEvento pequeño">4 Latidos: Camila en Concierto</p>
+        </div>
+    </div>
+    <!-- </main> -->
 </main>

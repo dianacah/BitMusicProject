@@ -2,17 +2,16 @@
   background-color: #343a40;
   position: fixed;
   height: 100%;
+  width: 20%;
 }
 
 .logo {
   /*dejo el original y agrego el ajuste para el área del logo*/
-  /* background: #343a40;
-  width: 80%; */
+  width: 80%;
   background: #343a40;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .menu {
@@ -43,7 +42,7 @@
   text-align: left;
   list-style-type: none;
 } */
-.home{
+.home {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
   list-style-type: none;
@@ -52,7 +51,7 @@
   text-align: left;
 }
 
-.home a{
+.home a {
   color: #adb5bd;
   margin-left: 5px;
 }
@@ -120,8 +119,8 @@
   margin-right: 100px;
   box-shadow: 6px 7px 10px -3px #be3a5d;
   color: white;
-  margin-top: 90px;
-  }
+  margin-top: 50px;
+}
 
 .cerrarBoton:hover {
   cursor: pointer;
