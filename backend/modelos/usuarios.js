@@ -27,12 +27,16 @@ const usuariosSchema = new Schema({
   image: {
     type: String,
     required: false,
-    default: "../../../assets/img/img-usuarios/Albert_Ortiz.jpg"
+    default: "../../../assets/img/img-usuarios/user.png"
   },
 
   role: {
     type: String,
     default: "normal"
+  },
+  songs: {
+    type: Array,
+    required: false
   }
 });
 

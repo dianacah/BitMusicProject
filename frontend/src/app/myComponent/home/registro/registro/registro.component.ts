@@ -41,7 +41,8 @@ export class RegistroComponent implements OnInit {
           email,
           password,
           role,
-          image
+          image,
+          songs
         } = this.registerInformation;
         let imagenLocal = localStorage.setItem(
           "image",
@@ -53,7 +54,8 @@ export class RegistroComponent implements OnInit {
           email,
           password,
           role,
-          image
+          image,
+          songs
         );
         this.router.navigate(["/inicio/perfil/informacion"]);
       });

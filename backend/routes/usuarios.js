@@ -59,6 +59,21 @@ usuariosRoute.put("/usuarios/:email", (req, res, next) => {
     .catch(next);
 });
 
+//POST Canciones favoritas
+usuariosRoute.put("/usuarios/add/:email", (req, res, next) => {
+  let peticion = req.body;
+  console.log(peticion);
+  Usuarios.findOneAndUpdate(req.params, { $push: peticion })
+    .then(() => {
+      const usuarios = Usuarios.findOne(req.params);
+      return usuarios;
+    })
+    .then(usuarios => {
+      res.send(usuarios);
+    })
+    .catch(next);
+});
+
 //DELETE
 
 usuariosRoute.delete("/usuarios/:name", (req, res, next) => {

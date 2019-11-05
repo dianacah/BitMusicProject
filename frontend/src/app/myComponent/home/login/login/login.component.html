@@ -31,13 +31,18 @@
     type="submit"
     (click)="obtener(ingresoForm)"
     [disabled]="ingresoForm.invalid"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5a4de3297d4c258c400957da9cc2dd046060514e
   >
     Iniciar sesión
   </button>
   <p *ngIf="wrongPass != false; then null; else mensajeError"></p>
-  <ng-template #mensajeError >
-    <p class="errMsg">¡Ups!, los datos que ingresaste no son correctos, por favor verifica tu
-        usuario y contraseña</p>
-    </ng-template>
+  <ng-template #mensajeError>
+    <p class="errMsg">
+      ¡Ups!, los datos que ingresaste no son correctos, por favor verifica tu
+      usuario y contraseña
+    </p>
+  </ng-template>
 </form>
