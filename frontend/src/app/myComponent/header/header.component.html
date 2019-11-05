@@ -16,18 +16,14 @@
     <div class="menu">
       <li class="home" (click)="mostrarHome()">
         <img
-          src="../../../assets/img/home-iconsubir.png"
-          height="40px"
-          width="40px"
+          src="../../../assets/img/icons8-home.png"
           alt=""
         />
         <a [routerLink]="['/inicio/contenido']">Home</a>
       </li>
       <li class="home">
         <img
-          src="../../../assets/img/home-iconsubir.png"
-          height="40px"
-          width="40px"
+          src="../../../assets/img/icons8-contact.png"
           alt=""
         />
         <a [routerLink]="['/inicio/perfil/informacion']">Perfil</a>
@@ -37,11 +33,10 @@
           class="botonAgregar"
           *ngIf="admin"
           [routerLink]="['/inicio/administrarCanciones']"
-        >
-          Agregar música
+        >Agregar música
         </button>
       </div>
-      <button class="cerrarBoton" routerLink="/home">Cerrar Sesion</button>
+      <button class="cerrarBoton" routerLink="/home">Cerrar Sesión</button>
     </div>
   </div>
 </header>

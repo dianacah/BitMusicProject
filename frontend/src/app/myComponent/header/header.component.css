@@ -5,8 +5,14 @@
 }
 
 .logo {
+  /*dejo el original y agrego el ajuste para el área del logo*/
+  /* background: #343a40;
+  width: 80%; */
   background: #343a40;
-  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .menu {
@@ -19,8 +25,14 @@
   justify-content: flex-start;
   align-items: center;
 }
+.menu img {
+  height: 30px;
+  width: 30px;
+  margin-bottom: -6px;
+}
 
-.home,
+/*dejo el original y agrego el ajuste para .home*/
+/* .home,
 .musica,
 .eventos {
   font-family: "Roboto", sans-serif;
@@ -30,6 +42,19 @@
   padding: 25px;
   text-align: left;
   list-style-type: none;
+} */
+.home{
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  list-style-type: none;
+  text-justify: auto;
+  padding: 25px;
+  text-align: left;
+}
+
+.home a{
+  color: #adb5bd;
+  margin-left: 5px;
 }
 
 .home:hover {
@@ -38,7 +63,7 @@
   text-shadow: 2px 2px 2px black;
 }
 
-.botonAgregar {
+/* .botonAgregar {
   background: #9331b4;
   text-align: center;
   font-size: 18px;
@@ -47,12 +72,26 @@
   margin-left: 5px;
   width: 150px;
   padding: 5px;
+} */
+
+.botonAgregar {
+  background: #610952;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  color: #adb5bd;
+  border-radius: 35px;
+  margin-left: 5px;
+  width: 150px;
+  padding: 5px;
+  margin-top: 45px;
 }
 
 .botonAgregar:hover {
   color: white;
   cursor: pointer;
-  box-shadow: 4px 6px 13px -4px #d6c2b8;
+  /* box-shadow: 4px 6px 13px -4px #d6c2b8; */
+  box-shadow: 4px 6px 13px -4px #c51eb7;
   transform: scale(1.05);
 }
 
@@ -81,7 +120,8 @@
   margin-right: 100px;
   box-shadow: 6px 7px 10px -3px #be3a5d;
   color: white;
-}
+  margin-top: 90px;
+  }
 
 .cerrarBoton:hover {
   cursor: pointer;
