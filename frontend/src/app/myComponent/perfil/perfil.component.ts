@@ -47,7 +47,8 @@ export class PerfilComponent implements OnInit {
           this.respuesta.email,
           this.respuesta.password,
           this.respuesta.role,
-          this.respuesta.image
+          this.respuesta.image,
+          this.respuesta.songs
         );
         localStorage.setItem("image", this.respuesta.image);
         const imagenHeader = document.querySelector(".infoPerfil");

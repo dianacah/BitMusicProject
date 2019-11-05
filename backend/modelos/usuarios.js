@@ -33,6 +33,10 @@ const usuariosSchema = new Schema({
   role: {
     type: String,
     default: "normal"
+  },
+  songs: {
+    type: Array,
+    required: false
   }
 });
 

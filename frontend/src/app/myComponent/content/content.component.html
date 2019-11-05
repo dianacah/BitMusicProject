@@ -35,6 +35,7 @@
     <img [src]="cancion.image" alt="" class="imgCancion" id="0" />
     <h1 class="nombre">{{ cancion.title }}</h1>
     <p class="artista">{{ cancion.artist }}</p>
+    <img (click)="favoritos(cancion)" src="../../../assets/img/heart.png" />
   </div>
 
   <!--  <div class="cancion">
@@ -83,38 +84,15 @@
     <h1 class="sectionTitle">Tus Favoritos</h1>
     <hr />
   </div>
-  <div class="fav1">
-    <img src="../../../assets/img/favImagen.jpg" alt="" class="imgFav" />
-    <h1 class="nombre">I Don't Care</h1>
+  <div class="fav1" *ngFor="let cancionFavorita of listaCancionesFavoritas">
+    <img [src]="cancionFavorita.image" alt="" class="imgFav" />
+    <h1 class="nombre">{{ cancionFavorita.title }}</h1>
     <div class="favWrapper">
-      <p class="artista">Justin Bieber</p>
+      <p class="artista">{{ cancionFavorita.artist }}</p>
       <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
     </div>
   </div>
-  <div class="fav2">
-    <img src="../../../assets/img/favImagen2.jpg" alt="" class="imgFav" />
-    <h1 class="nombre">Don't Call Me Angel</h1>
-    <div class="favWrapper">
-      <p class="artista">Ariana Grande</p>
-      <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
-    </div>
-  </div>
-  <div class="fav3">
-    <img src="../../../assets/img/favImagen3.jpg" alt="" class="imgFav" />
-    <h1 class="nombre">Señorita</h1>
-    <div class="favWrapper">
-      <p class="artista">Shawn Mendes</p>
-      <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
-    </div>
-  </div>
-  <div class="fav4">
-    <img src="../../../assets/img/favImagen4.jpg" alt="" class="imgFav" />
-    <h1 class="nombre">How Do You Sleep?</h1>
-    <div class="favWrapper">
-      <p class="artista">Sam Smith</p>
-      <img src="../../../assets/img/like.svg" alt="" class="favIcon" />
-    </div>
-  </div>
+
   <div class="tituloPublicidad">
     <h1>Próximos Eventos</h1>
   </div>

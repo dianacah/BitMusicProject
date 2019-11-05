@@ -56,7 +56,6 @@ hr {
   height: 250px;
   border-radius: 1.5rem;
   cursor: pointer;
-  
 }
 
 .imgCancion:hover {
@@ -83,13 +82,13 @@ hr {
   font-size: 14px;
 }
 
-.fav1 {
+/* .fav1 {
   grid-column-start: 1;
 }
 
 .fav2 {
   grid-column-start: 2;
-}
+} */
 
 .aside1 {
   background-image: url("../../../assets/img/imagenpublicidad1.jpg");
@@ -169,12 +168,11 @@ hr {
 }
 
 /*PARTE SUPERIOR BARRA DE REPRODUCCION Y BUSCADOR*/
-.parteSuperior{
+.parteSuperior {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 40px;
   gap: 10px;
-  
 }
 .barraReproductor {
   background-color: purple;
@@ -190,13 +188,11 @@ hr {
   grid-column: 4/6;
 }
 
-
 .buscarTexto {
   border-radius: 8px 8px 8px 8px;
   grid-column: 4/5;
-  height: 40px; 
+  height: 40px;
   width: 300px;
-  
 }
 .example-form {
   min-width: 150px;
@@ -206,4 +202,7 @@ hr {
 
 .example-full-width {
   width: 100%;
+}
+.gridFavoritas {
+  display: grid;
 }

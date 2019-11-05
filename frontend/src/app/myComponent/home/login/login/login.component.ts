@@ -40,13 +40,22 @@ export class LoginComponent implements OnInit {
           email,
           password,
           role,
-          image
+          image,
+          songs
         } = this.userLoginInformation;
         let imagenLocal = localStorage.setItem(
           "image",
           this.userLoginInformation.image
         );
-        this.storeService.setUser(name, age, email, password, role, image);
+        this.storeService.setUser(
+          name,
+          age,
+          email,
+          password,
+          role,
+          image,
+          songs
+        );
         if (
           this.userLoginInformation.password != datosIngreso.value.passwordLog
         ) {
