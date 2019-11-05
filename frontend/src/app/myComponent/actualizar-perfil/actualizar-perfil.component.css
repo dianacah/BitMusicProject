@@ -100,7 +100,7 @@ input {
   box-shadow: 2px 6px 26px black;
 }
 input:hover {
-  color: white;
+  color: #555555;
 }
 button {
   font-family: "Roboto", sans-serif;

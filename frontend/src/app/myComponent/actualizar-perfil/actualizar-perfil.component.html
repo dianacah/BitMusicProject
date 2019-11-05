@@ -1,16 +1,16 @@
 <div class="actualizarInfo">
     <div class="divFormularioActualizar">
         <img [src]="imagen" alt="" class="imagenPerfil imagenActualizardatos" />
-        <form [formGroup]="actualizarDatosForm" (ngSubmit)="enviar(registerForm.value)">
+        <form [formGroup]="actualizarDatosForm" (ngSubmit)="enviar(actualizarDatosForm.value)">
             <label>Nombre:</label>
-            <input formControlName="name" type="text" value={{name}}/>
+            <input formControlName="name" type="text"/>
             <small class="error" *ngIf="
           actualizarDatosForm.get('email').hasError('required') &&
           actualizarDatosForm.get('email').touched
         ">Este espacio es requerido</small>
             <br />
             <label>Edad:</label>
-            <input formControlName="age" type="text" value={{age}}/>
+            <input formControlName="age" type="text"/>
             <small class="error" *ngIf="
           actualizarDatosForm.get('email').hasError('required') &&
           actualizarDatosForm.get('email').touched
@@ -19,7 +19,7 @@
             <label>
                 Contraseña:
             </label>
-            <input formControlName="password" type="password" value={{password}}/>
+            <input formControlName="password" type="password"/>
             <small class="error" *ngIf="
           actualizarDatosForm.get('email').hasError('required') &&
           actualizarDatosForm.get('email').touched
@@ -32,7 +32,7 @@
           actualizarDatosForm.get('email').touched
         ">Este espacio es requerido</small>
             <br />
-            <button type="submit" [routerLink]="['/inicio/perfil/informacion']">Guardar cambios</button>
+            <button type="submit">Guardar cambios</button>
         </form>
     </div>
     <div class="publicidadBit">

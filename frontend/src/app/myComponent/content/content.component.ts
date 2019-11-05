@@ -31,7 +31,7 @@ export class ContentComponent implements OnInit {
   obtenerCanciones() {
     this.traerCancionesService.getCanciones().subscribe((response = []) => {
       this.listaCanciones = response;
-      console.log(this.listaCanciones);
+      console.log("canciones", this.listaCanciones);
     });
   }
   reproducir(rutaCancion) {

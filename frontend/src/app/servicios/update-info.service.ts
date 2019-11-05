@@ -10,7 +10,8 @@ export class UpdateInfoService {
 constructor(private http: HttpClient) { }
 
 updateInformation(registro){
-  return this.http.put(this.url, registro)
+  const urlRegistro = `${this.url}${registro.email}`;
+  return this.http.put(urlRegistro, registro);
 }
 
 }

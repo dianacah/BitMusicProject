@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
     this.consultaPerfilService
       .getPerfilInformation(datosIngreso.value.emailLog)
       .subscribe((response = {}) => {
-        console.log(response);
 
         this.userLoginInformation = response;
         const {
@@ -53,7 +52,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate([""]);
           this.wrongPass = false;
         } else {
-          this.router.navigate(["/inicio/contenido"]);
+          this.router.navigate(["/inicio/perfil/informacion"]);
         }
       });
   }

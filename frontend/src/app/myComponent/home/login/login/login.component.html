@@ -1,7 +1,6 @@
 <form
   class="homeForm"
   [formGroup]="ingresoForm"
-  (ngSubmit)="enviar(registerForm.value)"
 >
   <p class="title">Bienvenido</p>
   <input placeholder="Correo" formControlName="emailLog" type="email" />
@@ -32,7 +31,7 @@
     type="submit"
     (click)="obtener(ingresoForm)"
     [disabled]="ingresoForm.invalid"
-    
+
   >
     Iniciar sesión
   </button>
