@@ -1,48 +1,25 @@
-<form
-  class="homeForm"
-  [formGroup]="ingresoForm"
->
-  <p class="title">Bienvenido</p>
-  <input placeholder="Correo" formControlName="emailLog" type="email" />
-  <small
-    class="error"
-    *ngIf="
+<form class="homeForm" [formGroup]="ingresoForm">
+    <p class="title">Bienvenido</p>
+    <input placeholder="Correo" formControlName="emailLog" type="email" />
+    <small class="error" *ngIf="
       ingresoForm.get('emailLog').hasError('required') &&
       ingresoForm.get('emailLog').touched
-    "
-    >Ups, por favor ingresa los datos para continuar</small
-  >
-  <br />
-  <input
-    placeholder="Contraseña"
-    formControlName="passwordLog"
-    type="password"
-  />
-  <small
-    class="error"
-    *ngIf="
+    ">Ups, por favor ingresa los datos para continuar</small>
+    <br />
+    <input placeholder="Contraseña" formControlName="passwordLog" type="password" />
+    <small class="error" *ngIf="
       ingresoForm.get('passwordLog').hasError('required') &&
       ingresoForm.get('passwordLog').touched
-    "
-    >Ups, por favor ingresa los datos para continuar</small
-  >
-  <br />
-  <button
-    type="submit"
-    (click)="obtener(ingresoForm)"
-    [disabled]="ingresoForm.invalid"
-<<<<<<< HEAD
-
-=======
->>>>>>> 5a4de3297d4c258c400957da9cc2dd046060514e
-  >
-    Iniciar sesión
-  </button>
-  <p *ngIf="wrongPass != false; then null; else mensajeError"></p>
-  <ng-template #mensajeError>
-    <p class="errMsg">
-      ¡Ups!, los datos que ingresaste no son correctos, por favor verifica tu
-      usuario y contraseña
-    </p>
-  </ng-template>
+    ">Ups, por favor ingresa los datos para continuar</small>
+    <br />
+    <button type="submit" (click)="obtener(ingresoForm)" [disabled]="ingresoForm.invalid">
+        Iniciar sesión
+    </button>
+    <p *ngIf="wrongPass != false; then null; else mensajeError"></p>
+    <ng-template #mensajeError>
+        <p class="errMsg">
+            ¡Ups!, los datos que ingresaste no son correctos, por favor verifica tu
+            usuario y contraseña
+        </p>
+    </ng-template>
 </form>

@@ -22,46 +22,49 @@ export class ActualizarPerfilComponent implements OnInit {
     private builder: FormBuilder,
     private storeService: StoreService,
     private updateInfoService: UpdateInfoService,
-    private router: Router,
+    private router: Router
   ) {}
 
   enviar(registro) {
-    console.log(registro)
+    console.log(registro);
     this.updateInfoService.updateInformation(registro).subscribe(response => {
-      console.log(response)
-      this.updateData  = response;
+      console.log(response);
+      this.updateData = response;
       const {
         name,
         age,
         email,
         password,
         role,
-        image
+        image,
+        songs
       } = this.updateData;
-      this.storeService.setUser(name, age, email, password, role, image);
+      this.storeService.setUser(name, age, email, password, role, image, songs);
       this.router.navigate(["/inicio/perfil/informacion"]);
-
-    })
+    });
   }
 
-  getUser(){
+  getUser() {
     const user = this.storeService.getUser();
     this.name = user.name;
     this.age = user.age;
     this.email = user.email;
-    this.password = user.password
+    this.password = user.password;
     this.imagen = localStorage.getItem("image");
   }
 
   ngOnInit() {
-    this.getUser()
+    this.getUser();
     this.actualizarDatosForm = this.builder.group({
       name: [this.name, Validators.required],
       age: [
         this.age,
         Validators.compose([Validators.required, Validators.minLength(1)])
       ],
-      email: [this.email, Validators.compose([Validators.required, Validators.email])],
+      email: [
+        this.email,
+        Validators.compose([Validators.required, Validators.email])
+      ],
       password: [this.password, Validators.required]
     });
   }
