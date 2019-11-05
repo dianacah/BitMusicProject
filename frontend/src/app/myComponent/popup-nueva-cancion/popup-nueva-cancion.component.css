@@ -6,16 +6,33 @@
   margin: 1%;
 }
 
-.botonAgregar{
+.botonAgregar {
   background-color: blueviolet;
   color: white;
   height: 27px;
   border-radius: 6px;
-  font-weight: bold;
+  border: none;
+  font-weight: 100;
   font-size: 15px;
   cursor: pointer;
+  margin-top: 5%;
 }
 
 /* .botonAgregar:hover{
   pointer-events: ;
 } */
+input {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 5px;
+}
+.addASong {
+  font-weight: 100;
+  font-size: 18px;
+  color: gray;
+}
+.selectFile {
+  font-weight: 100;
+  font-size: 14px;
+  color: gray;
+}
